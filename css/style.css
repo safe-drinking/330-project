@@ -1,3 +1,33 @@
 body{
-    font-family:Arial;
+    font-family: 'Nunito', sans-serif !important;
+    /*font-family: 'Quicksand', sans-serif !important;
+    font-family: 'Dosis', sans-serif !important;*/
+}
+.jumbotron{
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+.new-event-ctnr{
+    padding: 15% 18% 15% 18%!important;
+}
+.new-event-btn{
+    font-size: 62px!important;
+    background-color:#eee;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    color:black;
+}
+.new-event-btn p{
+    margin:0px;
+}
+.events-ctnr p{
+    font-size: 60px;
+}
+.well{
+    font-size: 40px;
 }
