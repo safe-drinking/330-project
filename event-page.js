@@ -1,23 +1,24 @@
-var eventsList = [];
-var events = 0;
 
-function init(){
+function init() {
     console.log("Initializing script");
+    events = localStorage.getItem("events");
+    eventsListLastName = localStorage.getItem("eventsListLastName");
     window.listEvents();
 }
 
-function addEvent(){
-    eventsList[events] = "EventTitle_" + events;
-    events++; 
-    
+function addEvent() {
+    eventsListLastName = "EventTitle_" + events;
+    events++;
     window.listEvents();
-    document.location.href = "index.html";
+    document.location.href = "dashboard.html";
 }
-function listEvents(){
-    console.log("List Events");
-    localStorage.setItem("events", events);
-    localStorage.setItem("eventsList", eventsList);
-    
+
+function listEvents() {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("events", events);
+        localStorage.setItem("eventsListLastName", eventsListLastName);
+    }
+
 }
 
 init();

@@ -49,3 +49,9 @@ body{
 .btn-group{
     margin:19% 17% 1% 16%;
 }
+.login-button{
+    font-size:60px;
+}
+.login-message{
+    font-size:60px;
+}

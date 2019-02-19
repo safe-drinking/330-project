@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!--will likely need to change the index.html page to be the login landing page in the future.-->
+
+<head>
+    <title>Safe Drinking</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Montserrat|Nunito|Quicksand|Source+Sans+Pro"
+        rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container jumbo-ctnr">
+        <div class="jumbotron">
+            DASHBOARD
+        </div>
+    </div>
+    <div class="container new-event-ctnr">
+        <button type="button" onclick="openEvent()" class="new-event-btn">
+            + New Event
+        </button>
+    </div>
+    <div class="container events-ctnr">
+        <p>Events
+            <!--This button is just gonna be here for development-->
+            <button onclick="clearEvents()">Clear</button>
+        </p>
+        <div class="well" id="events-list">
+            <p id = "events-list-content"></p>
+        </div>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="menu-btn">
+            <i class="material-icons icon">
+                home
+            </i>
+        </button>
+        <button type="button" class="menu-btn">
+            <i class="material-icons icon">
+                show_chart
+            </i>
+        </button>
+        <button type="button" class="menu-btn">
+            <i class="material-icons icon">
+                people
+            </i>
+        </button>
+        <button type="button" class="menu-btn">
+            <i class="material-icons icon">
+                settings
+            </i>
+        </button>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
