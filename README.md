@@ -6,4 +6,4 @@ Create a new event from the dashboard. Enter the event and add drinking until yo
 This App is intended for viewing on Google Chrome.
 NOTE To view correctly, "Inspect" the page in Chrome and click this button in the top of the inspecting menu.
 
-<img src="images/ChromeButton.jpg" alt="Chrome Inspect Button">
+<img src="./images/ChromeButton.JPG" alt="Chrome Inspect Button">
