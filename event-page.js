@@ -11,7 +11,7 @@ function addEvent(){
     events++; 
     
     window.listEvents();
-    //document.location.href = "index.html";
+    document.location.href = "index.html";
 }
 function listEvents(){
     console.log("List Events");
