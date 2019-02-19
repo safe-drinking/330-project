@@ -1,7 +1,6 @@
 
 function init() {
     events = localStorage.getItem("events");
-    //eventsListLastName = localStorage.getItem("eventsListLastName");
 }
 
 function addEvent() {
