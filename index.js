@@ -1,10 +1,8 @@
-var eventsListLastName = [];
 var events = 0;
 
 function init(){
-    console.log("Initializing script");
+    localStorage.clear();
     localStorage.setItem("events", events);
-    localStorage.setItem("eventsListLastName", eventsListLastName);
 }
 
 function login(){

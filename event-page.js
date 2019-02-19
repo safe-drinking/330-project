@@ -1,24 +1,14 @@
 
 function init() {
-    console.log("Initializing script");
     events = localStorage.getItem("events");
-    eventsListLastName = localStorage.getItem("eventsListLastName");
-    window.listEvents();
+    //eventsListLastName = localStorage.getItem("eventsListLastName");
 }
 
 function addEvent() {
-    eventsListLastName = "EventTitle_" + events;
+    localStorage.setItem("event_" + events, "Event " + events);
     events++;
-    window.listEvents();
+    localStorage.setItem("events", events);
     document.location.href = "dashboard.html";
-}
-
-function listEvents() {
-    if (typeof (Storage) !== "undefined") {
-        localStorage.setItem("events", events);
-        localStorage.setItem("eventsListLastName", eventsListLastName);
-    }
-
 }
 
 init();
