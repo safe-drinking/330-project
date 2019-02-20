@@ -5,10 +5,10 @@ function init() {
     var eventName = localStorage.getItem("thisEvent");
     
     if (eventName !== "null"){
-        document.getElementById("jumbo-id").innerHTML = localStorage.getItem("event_"+eventName);
+        document.getElementById("event-title").innerHTML = localStorage.getItem("event_"+eventName);
     }
     else{
-        document.getElementById("jumbo-id").innerHTML = "New Event";
+        document.getElementById("event-title").innerHTML = "New Event";
     }
 }
 

@@ -12,19 +12,46 @@
         rel="stylesheet">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- JS for the Bootstrap Modal-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div class="container jumbo-ctnr">
         <div class="jumbotron" id="jumbo-id">
-            EVENT PAGE
+            <button type="button" class="event-title-btn" id="event-title" data-toggle="modal"
+                data-target="#inputModal"></button>
         </div>
     </div>
     <div>
         <button onclick="addEvent()">Done</button>
     </div>
 
-    <script src="event-page.js"></script>
+    <!-- Modal -->
+    <div id="inputModal" class="modal event-modal" role="dialog">
+        <div class="modal-dialog event-modal-dialog">
+
+            <!-- Modal Content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <p class="modal-title">Change Event Name</p>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="email" placeholder="input" class="form-control event-title-input" id="title">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default submit-btn" data-dismiss="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="event-page.js">
+    </script>
 </body>
 
 </html>

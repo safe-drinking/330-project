@@ -55,3 +55,27 @@ body{
 .login-message{
     font-size:60px;
 }
+.event-modal{
+    width:100%;
+}
+.event-modal-dialog{
+    width:90%!important;
+    margin-top:40%!important; 
+}
+.event-title-input{
+    font-size:70px!important;
+    height:100px!important;
+}
+.modal-content{
+    height:700px;
+}
+.event-modal p{
+    font-size:80px;
+}
+.event-modal button{
+    font-size:60px;
+}
+.modal-body{
+    padding-top:150px!important;
+    padding-bottom:150px!important;
+}
