@@ -79,3 +79,40 @@ body{
     padding-top:150px!important;
     padding-bottom:150px!important;
 }
+.bac-checker{
+    font-size:65px;
+    display: flex;
+    justify-content: center;
+}
+#bac-value{
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.drinks-btn-group{
+    display: flex;
+    justify-content: center;
+}
+.drinks-btn-container{
+    font-size: 50px;
+    text-align: center;
+    border: solid 3px black;
+    background-color: white;
+    width: 33%;
+    margin: 5px;
+}
+.add-buddy-button{
+    font-size: 70px;
+    border-radius: 30px;
+    background-color: white;
+    border: solid 2px black;
+    margin: 70px;
+    padding: 20px;
+}
+.exit-event-button{
+    font-size: 70px;
+    border-radius: 30px;
+    background-color: white;
+    border: solid 2px black;
+    margin: 70px;
+    padding: 20px;
+}
