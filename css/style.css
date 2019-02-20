@@ -99,20 +99,30 @@ body{
     background-color: white;
     width: 33%;
     margin: 5px;
+    padding: 10px 0px 10px 0px;
 }
 .add-buddy-button{
     font-size: 70px;
-    border-radius: 30px;
-    background-color: white;
+    border-radius: 5px;
+    background-color: lightgray;
     border: solid 2px black;
     margin: 70px;
     padding: 20px;
 }
 .exit-event-button{
     font-size: 70px;
-    border-radius: 30px;
-    background-color: white;
+    border-radius: 5px;
+    background-color: lightgray;
     border: solid 2px black;
     margin: 70px;
     padding: 20px;
+}
+.drink-img{
+    height: 75%;
+    width: 75%;
+}
+#liquor-img{
+    height: 60%;
+    width: 60%;
+    margin: 35px;
 }
