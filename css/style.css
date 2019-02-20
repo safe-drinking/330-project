@@ -36,7 +36,7 @@ body{
 }
 .well{
     font-size: 40px;
-    height: 400px;
+    height: 750px;
 }
 .menu-btn .icon{
     font-size: 100px;
@@ -47,7 +47,7 @@ body{
     border:none;
 }
 .btn-group{
-    margin:19% 17% 1% 16%;
+    margin:7% 17% 1% 16%;
 }
 .login-button{
     font-size:60px;

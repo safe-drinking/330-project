@@ -1,5 +1,4 @@
 
-
 function init() {
     events = (localStorage.getItem("events")) ?
         localStorage.getItem("events") :
