@@ -124,6 +124,13 @@ body{
     padding-top:150px!important;
     padding-bottom:150px!important;
 }
+.modal-body p{
+    font-size:60px;
+}
+.warning-modal-body{
+    padding-top:20px!important;
+    padding-bottom:20px!important;
+}
 .bac-checker{
     font-size:65px;
     display: flex;

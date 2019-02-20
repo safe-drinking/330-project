@@ -6,7 +6,7 @@ var title;
 function init() {
     events = localStorage.getItem("events");
     eventName = localStorage.getItem("thisEvent");
-
+    localStorage.setItem("notify", "0");
     //REFRESHING the page will cause all the data to be lost if DONE is not pressed
     if (eventName !== "null") {
         bac = Number(localStorage.getItem("bac_" + eventName));
@@ -54,10 +54,15 @@ function goHome() {
     closeEvent();
 }
 
-function notifyLimit() {
+function openWarning() {
     document.getElementById("bac-value").style = "color: red";
     localStorage.setItem("notify", "1");
+    document.getElementById("warningModal").style = 'display: inline';
 
+}
+
+function closeWarning(){
+    document.getElementById("warningModal").style = 'display: none';
 }
 
 function setBAC() {
@@ -68,7 +73,7 @@ function setBAC() {
         document.getElementById("bac-value").innerHTML = bac;
     }
     if (bac >= 0.12) {
-        notifyLimit();
+        openWarning();
     }
 }
 function goSettings(){
