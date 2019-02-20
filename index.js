@@ -9,4 +9,8 @@ function login(){
     document.location.href = "dashboard.html";
 }
 
+function register(){
+    document.location.href = "dashboard.html";
+}
+
 init();

@@ -35,4 +35,8 @@ function listEvents() {
     }
 }
 
+function goSettings(){
+    document.location.href = "settings.html";
+}
+
 init();
