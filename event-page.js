@@ -16,7 +16,14 @@ function addEvent() {
     localStorage.setItem("event_" + events, "Event " + events);
     events++;
     localStorage.setItem("events", events);
-    document.location.href = "dashboard.html";
+    
 }
 
+function closeEvent(){
+    if (localStorage.getItem("thisEvent") === "null"){
+        addEvent();
+    }
+
+    document.location.href = "dashboard.html";
+}
 init();
