@@ -1,7 +1,9 @@
 var events;
+var bac;
 
 function init() {
     events = localStorage.getItem("events");
+    bac = localStorage.getItem("bac");
     var eventName = localStorage.getItem("thisEvent");
     
     if (eventName !== "null"){
@@ -12,6 +14,10 @@ function init() {
     }
 }
 
+function addDrink(){
+    
+
+}
 function addEvent() {
     localStorage.setItem("event_" + events, "Event " + events);
     events++;
