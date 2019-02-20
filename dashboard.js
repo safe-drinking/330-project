@@ -7,8 +7,13 @@ function init() {
     window.listEvents();
 }
 
-function openEvent() {
+function openNewEvent() {
+    localStorage.setItem("thisEvent", null);
     document.location.href = "event-page.html";
+}
+function openEvent(id){
+    localStorage.setItem("thisEvent", id);
+    document.location.href= "event-page.html"
 }
 function clearEvents() {
     events = 0;
@@ -22,9 +27,10 @@ function listEvents() {
     else {
         var i;
         for (i = 0; i < events; i++) {
-            eventName = localStorage.getItem("event_" + i);
+            var eventName = localStorage.getItem("event_" + i);
+            console.log(eventName);
             document.getElementById("events-list-content").innerHTML +=
-                "<button onclick='openEvent()' id='" + i + "'>" + eventName + "</button></br>";
+                "<button onclick='openEvent("+i+")' id='" + i + "'>" + eventName + "</button></br>";
         }
 
     }
