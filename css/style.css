@@ -16,6 +16,11 @@ body{
 .login-button{
     font-size:80px;
     margin-top:80px;
+    background-color: #eee;
+    padding: 15px;
+}
+.login-button:active{
+    background-color: lightgray;
 }
 .login-buttons-ctnr{
     padding:20%;
@@ -114,6 +119,9 @@ body{
     background-color:#eee;
     border:none;
 }
+.btn-group button:active{
+    background-color: lightgray;
+}
 .btn-group{
     margin:7% 8% 1% 9%;
 }
@@ -128,6 +136,13 @@ body{
 .event-title-input{
     font-size:70px!important;
     height:100px!important;
+}
+.event-title-btn{
+    background-color: #eee;
+    padding: 10px;
+}
+.event-title-btn:active{
+    background-color: lightgray;
 }
 .event-modal-content{
     height:700px!important;
@@ -153,7 +168,7 @@ body{
     font-size:85px;
     display: flex;
     justify-content: center;
-    margin: 80px;
+    margin: 70px;
 }
 #bac-value{
     margin-left: 20px;
@@ -162,7 +177,7 @@ body{
 .drinks-btn-group{
     display: flex;
     justify-content: center;
-    margin: 80px 40px 80px 40px;
+    margin: 160px 40px 80px 40px;
 }
 .drinks-btn-container{
     font-size: 50px;
@@ -172,6 +187,11 @@ body{
     width: 33%;
     margin: 5px;
     padding: 10px 0px 10px 0px;
+    box-shadow: 2px 2px;
+}
+.drinks-btn-container:active{
+    box-shadow: 0px 0px;
+    border-color: gray;
 }
 .event-action-btn-group{
     margin-top: 100px;
