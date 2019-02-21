@@ -63,15 +63,17 @@ body{
     width:90%!important;
 }
 .new-event-ctnr{
-    padding: 15% 15.5% 15% 15.5%!important;
+    padding: 11.5% 15.5% 11.5% 15.5%!important;
 }
 .new-event-btn{
     font-size: 70px!important;
     background-color:#eee;
-    border: none;
     border-radius: 5px;
     padding: 10px 20px 10px 20px;
     color:black;
+}
+.new-event-btn:active{
+    background-color: lightgray;
 }
 .new-event-btn p{
     margin:0px;
@@ -88,8 +90,24 @@ body{
     height: 750px;
     overflow-y: scroll;
 }
+#events-list-content button{
+    background-color: #eee;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+#events-list-content button:active{
+    background-color: lightgray;
+}
+.clear-events-btn{
+    background-color: #eee;
+    margin-left: 480px;
+    padding: 15px;
+}
+.clear-events-btn:active{
+    background-color: lightgray;
+}
 .menu-btn .icon{
-    font-size: 100px;
+    font-size: 140px;
 }
 .btn-group button{
     padding:20px 30px 20px 30px;
@@ -97,7 +115,7 @@ body{
     border:none;
 }
 .btn-group{
-    margin:7% 17% 1% 16%;
+    margin:7% 8% 1% 9%;
 }
 
 .event-modal{
@@ -132,9 +150,10 @@ body{
     padding-bottom:20px!important;
 }
 .bac-checker{
-    font-size:65px;
+    font-size:85px;
     display: flex;
     justify-content: center;
+    margin: 80px;
 }
 #bac-value{
     margin-left: 20px;
@@ -143,6 +162,7 @@ body{
 .drinks-btn-group{
     display: flex;
     justify-content: center;
+    margin: 80px 40px 80px 40px;
 }
 .drinks-btn-container{
     font-size: 50px;
@@ -153,21 +173,32 @@ body{
     margin: 5px;
     padding: 10px 0px 10px 0px;
 }
+.event-action-btn-group{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 .add-buddy-button{
     font-size: 70px;
     border-radius: 5px;
-    background-color: lightgray;
-    border: solid 2px black;
+    background-color: #eee;
     margin: 70px;
     padding: 20px;
+    border: none;
+}
+.add-buddy-button:active{
+    box-shadow: 0px 0px;
+    background-color: lightgray;
 }
 .exit-event-button{
     font-size: 70px;
     border-radius: 5px;
-    background-color: lightgray;
-    border: solid 2px black;
+    background-color: #eee;
     margin: 70px;
     padding: 20px;
+    border: none;
+}
+.exit-event-button:active{
+    background-color: lightgray;
 }
 .drink-img{
     height: 75%;
