@@ -39,8 +39,8 @@ body{
 .modal-opt input{
     border: 0px;
     width:10%;
-    height: .5em;
-    margin-top:30px!important;
+    height: .55em;
+    margin-top:25px!important;
     margin-left:-80px!important;
 }
 
@@ -55,6 +55,17 @@ body{
     font-size:60px!important;
     margin-right:50px;
 }
+.quiz-modal-footer{
+    text-align:center!important;
+}
+.quiz-modal-footer .back-btn{
+    margin-right:60%;
+}
+.quiz-modal-footer .back-submit-btn{
+    margin-right:52%;
+}
+
+
 /* Dashboard and the rest*/
 .jumbotron{
     text-align: center;

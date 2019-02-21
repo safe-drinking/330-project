@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- Modal -->
+    <!-- Register Modal -->
     <div id="registerModal" class="modal fade event-modal" role="dialog">
         <div class="modal-dialog event-modal-dialog">
 
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-
+    <!-- Sex Modal -->
     <div id="sexModal" class="modal fade event-modal" role="dialog">
         <div class="modal-dialog event-modal-dialog">
 
@@ -65,13 +65,16 @@
 
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer quiz-modal-footer">
+                    <button type="submit" class="btn btn-default back-btn" data-dismiss="modal" data-toggle="modal"
+                        data-target="#registerModal">Back</button>
                     <button type="submit" class="btn btn-default submit-btn" data-dismiss="modal" data-toggle="modal"
                         data-target="#heightModal">Next</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Height Modal -->
     <div id="heightModal" class="modal fade event-modal" role="dialog">
         <div class="modal-dialog event-modal-dialog">
 
@@ -92,7 +95,9 @@
 
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer quiz-modal-footer">
+                    <button type="submit" class="btn btn-default back-btn" data-dismiss="modal" data-toggle="modal"
+                        data-target="#sexModal">Back</button>
                     <button type="submit" class="btn btn-default submit-btn" data-dismiss="modal" data-toggle="modal"
                         data-target="#weightModal">Next</button>
                 </div>
@@ -100,7 +105,7 @@
         </div>
     </div>
 
-
+    <!-- Weight Modal -->
     <div id="weightModal" class="modal fade event-modal" role="dialog">
         <div class="modal-dialog event-modal-dialog">
 
@@ -118,12 +123,16 @@
 
                     </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer quiz-modal-footer">
+                    <button type="submit" class="btn btn-default back-submit-btn" data-dismiss="modal" data-toggle="modal"
+                        data-target="#heightModal">Back</button>
                     <button type="submit" onclick="register()" class="btn btn-default submit-btn">Submit</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Login Modal -->
     <div id="loginModal" class="modal fade event-modal" role="dialog">
         <div class="modal-dialog event-modal-dialog">
 
