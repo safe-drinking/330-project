@@ -9,4 +9,4 @@ NOTE To view correctly, "Inspect" the page in Chrome and click this button in th
 
 <img src="./images/ChromeButton.JPG" alt="Chrome Inspect Button">
 
-Change the device view from the default (likely "responsive") to "Galaxy S5"
+Change the device view from the default (likely "responsive") to "Galaxy S5".
