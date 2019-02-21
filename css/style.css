@@ -203,7 +203,6 @@ body{
     background-color: #eee;
     margin: 70px;
     padding: 20px;
-    border: none;
 }
 .add-buddy-button:active{
     box-shadow: 0px 0px;
@@ -215,7 +214,6 @@ body{
     background-color: #eee;
     margin: 70px;
     padding: 20px;
-    border: none;
 }
 .exit-event-button:active{
     background-color: lightgray;
