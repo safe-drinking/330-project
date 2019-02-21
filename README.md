@@ -8,3 +8,5 @@ This App is intended for viewing on Google Chrome.
 NOTE To view correctly, "Inspect" the page in Chrome and click this button in the top of the inspecting menu.
 
 <img src="./images/ChromeButton.JPG" alt="Chrome Inspect Button">
+
+Change the device view from the default (likely "responsive") to "Galaxy S5"
