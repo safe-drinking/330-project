@@ -1,0 +1,245 @@
+body{
+    font-family: 'Nunito', sans-serif !important;
+    /*font-family: 'Quicksand', sans-serif !important;
+    font-family: 'Dosis', sans-serif !important;*/
+}
+
+/*Login/Register Page (index.html)*/
+.login-message-ctnr{
+    padding:100px 20px 100px 20px;
+}
+.login-message{
+    margin:auto;
+    font-size:90px;
+    text-align:center;
+}
+.login-button{
+    font-size:80px;
+    margin-top:80px;
+    background-color: #eee;
+    padding: 15px;
+}
+.login-button:active{
+    background-color: lightgray;
+}
+.login-buttons-ctnr{
+    padding:20%;
+    text-align:center;
+}
+.register-input{
+    font-size:60px!important;
+    height:100px!important;
+    margin-top:30px;
+}
+
+.modal-opt{
+    font-size:60px!important;
+    margin-left:50px;
+}
+.modal-opt input{
+    border: 0px;
+    width:10%;
+    height: .55em;
+    margin-top:25px!important;
+    margin-left:-80px!important;
+}
+
+.height-input{
+    font-size:60px!important;
+    height:100px!important;
+    width:200px!important;
+    display:inline-block!important;
+    margin-right:10px;
+}
+.height-label{
+    font-size:60px!important;
+    margin-right:50px;
+}
+.quiz-modal-footer{
+    text-align:center!important;
+}
+.quiz-modal-footer .back-btn{
+    margin-right:60%;
+}
+.quiz-modal-footer .back-submit-btn{
+    margin-right:52%;
+}
+
+
+/* Dashboard and the rest*/
+.jumbotron{
+    text-align: center;
+    font-size: 85px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+.jumbo-ctnr{
+    width:90%!important;
+}
+.new-event-ctnr{
+    padding: 11.5% 15.5% 11.5% 15.5%!important;
+}
+.new-event-btn{
+    font-size: 70px!important;
+    background-color:#eee;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    color:black;
+}
+.new-event-btn:active{
+    background-color: lightgray;
+}
+.new-event-btn p{
+    margin:0px;
+}
+
+.events-ctnr p{
+    font-size: 60px;
+}
+.events-ctnr{
+    width:90%!important;
+}
+.well{
+    font-size: 40px;
+    height: 750px;
+    overflow-y: scroll;
+}
+#events-list-content button{
+    background-color: #eee;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+#events-list-content button:active{
+    background-color: lightgray;
+}
+.clear-events-btn{
+    background-color: #eee;
+    margin-left: 480px;
+    padding: 15px;
+}
+.clear-events-btn:active{
+    background-color: lightgray;
+}
+.menu-btn .icon{
+    font-size: 140px;
+}
+.btn-group button{
+    padding:20px 30px 20px 30px;
+    background-color:#eee;
+    border:none;
+}
+.btn-group button:active{
+    background-color: lightgray;
+}
+.btn-group{
+    margin:7% 8% 1% 9%;
+}
+
+.event-modal{
+    width:100%;
+}
+.event-modal-dialog{
+    width:90%!important;
+    margin-top:40%!important; 
+}
+.event-title-input{
+    font-size:70px!important;
+    height:100px!important;
+}
+.event-title-btn{
+    background-color: #eee;
+    padding: 10px;
+}
+.event-title-btn:active{
+    background-color: lightgray;
+}
+.event-modal-content{
+    height:700px!important;
+}
+.event-modal p{
+    font-size:80px;
+}
+.event-modal button{
+    font-size:60px;
+}
+.modal-body{
+    padding-top:150px!important;
+    padding-bottom:150px!important;
+}
+.modal-body p{
+    font-size:60px;
+}
+.warning-modal-body{
+    padding-top:20px!important;
+    padding-bottom:20px!important;
+}
+.bac-checker{
+    font-size:85px;
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+}
+#bac-value{
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.drinks-btn-group{
+    display: flex;
+    justify-content: center;
+    margin: 160px 40px 80px 40px;
+}
+.drinks-btn-container{
+    font-size: 50px;
+    text-align: center;
+    border: solid 3px black;
+    background-color: white;
+    width: 33%;
+    margin: 5px;
+    padding: 10px 0px 10px 0px;
+    box-shadow: 2px 2px;
+}
+.drinks-btn-container:active{
+    box-shadow: 0px 0px;
+    border-color: gray;
+}
+.event-action-btn-group{
+    margin-top: 100px;
+    margin-bottom: 95px;
+}
+.add-buddy-button{
+    font-size: 70px;
+    border-radius: 5px;
+    background-color: #eee;
+    margin: 70px;
+    padding: 20px;
+}
+.add-buddy-button:active{
+    box-shadow: 0px 0px;
+    background-color: lightgray;
+}
+.exit-event-button{
+    font-size: 70px;
+    border-radius: 5px;
+    background-color: #eee;
+    margin: 70px;
+    padding: 20px;
+}
+.exit-event-button:active{
+    background-color: lightgray;
+}
+.drink-img{
+    height: 75%;
+    width: 75%;
+}
+#liquor-img{
+    height: 60%;
+    width: 60%;
+    margin: 35px;
+}
+
+/*Settings Page*/
+.settings-message{
+    font-size:60px;
+}
