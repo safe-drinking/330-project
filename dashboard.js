@@ -35,6 +35,10 @@ function listEvents() {
     }
 }
 
+function goTo(location){
+    document.location.href = location;
+}
+
 function goSettings(){
     document.location.href = "settings.html";
 }

@@ -41,17 +41,21 @@ function changeName() {
     document.getElementById("event-title").innerHTML = title;
 }
 
-function closeEvent() {
+function closeEvent(location) {
     if (localStorage.getItem("thisEvent") === "null") {
         addEvent();
     }
 
-    document.location.href = "dashboard.html";
+    document.location.href = location;
 }
 
 function goHome() {
     //still saves data
-    closeEvent();
+    closeEvent("dashboard.html");
+}
+
+function viewStats() {
+    closeEvent("stats-page.html");
 }
 
 function openWarning() {

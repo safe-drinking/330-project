@@ -243,3 +243,13 @@ body{
 .settings-message{
     font-size:60px;
 }
+
+/*      Stats Page      */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: center;
+  }
