@@ -22,3 +22,23 @@ var myChart = new Chart(ctx, {
     ]
   }
 });
+
+var pills = ['pill1', 'pill2', 'pill3'];
+function pillClick(e){
+    console.log(e);
+    var targ;
+    targ = e.target;
+    console.log(targ.class);
+    pills.forEach(function(x){
+        console.log
+        document.getElementById(x).class = "inactive";
+    });
+    targ.class = "active";
+}
+
+// function bodyClicked(e) {
+//       var targ;
+//         targ=e.srcElement;
+//         targID = targ.id;
+//         setCookie("level", targID.toString());
+//     }
