@@ -2,13 +2,13 @@ function goTo(location){
     document.location.href = location;
 }
 
-var years = [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050];
+var years = [0,1,2,3,4,5,6,7,8,9];
 // For drawing the lines
-var africa = [86,114,106,106,107,111,133,221,783,2478];
-var asia = [282,350,411,502,635,809,947,1402,3700,5267];
-var europe = [168,170,178,190,203,276,408,547,675,734];
-var latinAmerica = [40,20,10,16,24,38,74,167,508,784];
-var northAmerica = [6,3,2,2,7,26,82,172,312,433];
+var year = [86,114,106,106,107,111,133,221,783,2478];
+var month = [282,350,411,502,635,809,947,1402,3700,5267];
+var week = [168,170,178,190,203,276,408,547,675,734];
+var data_values = [year, month, week];
+var data_types = ['year', 'month', 'week'];
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
@@ -17,28 +17,36 @@ var myChart = new Chart(ctx, {
     labels: years,
     datasets: [
       { 
-        data: africa
+        data: year,
+        label: "Year",
+        borderColor: "#3e95cd",
       }
     ]
   }
 });
 
 var pills = ['pill1', 'pill2', 'pill3'];
-function pillClick(e){
-    console.log(e);
-    var targ;
-    targ = e.target;
-    console.log(targ.class);
+function pillClick(num){
     pills.forEach(function(x){
-        console.log
-        document.getElementById(x).class = "inactive";
+        document.getElementById(x).className = "inactive";
     });
-    targ.class = "active";
+    document.getElementById(pills[num]).className = "active";
+    removeData(myChart);
+    addData(myChart, data_types[num], data_values[num]);
 }
 
-// function bodyClicked(e) {
-//       var targ;
-//         targ=e.srcElement;
-//         targID = targ.id;
-//         setCookie("level", targID.toString());
-//     }
+function addData(chart, label, data_p) {
+    chart.data.labels.push(label);
+    chart.data.datasets.push({
+        data: data_p,
+        label: label,
+        borderColor: "#3e95cd",
+    });
+    chart.update();
+}
+
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.pop();
+    chart.update();
+}
