@@ -253,3 +253,14 @@ body{
     width: 100%;
     text-align: center;
   }
+
+.my-pill {
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 65px;
+}
+
+.my-chart {
+    padding: 30px;
+}
