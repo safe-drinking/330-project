@@ -6,7 +6,7 @@ body{
 
 /*Login/Register Page (index.html)*/
 .login-body{
-    background-color:#009da5;
+    background-color:#009da5!important;
     
 }
 .login-message-ctnr{
@@ -91,6 +91,7 @@ body{
 
 
 /* Dashboard and the rest*/
+
 .jumbotron{
     text-align: center;
     font-size: 85px;
