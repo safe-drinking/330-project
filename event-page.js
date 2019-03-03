@@ -34,6 +34,8 @@ function addEvent() {
     localStorage.setItem("events", events);
 
 }
+function addBuddy(){
+}
 
 function changeName() {
     title = document.getElementById("title").value;
