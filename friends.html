@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<!-- Our Login Page-->
+<!--will likely need to change the index.html page to be the login landing page in the future.-->
 
 <head>
     <title>Safe Drinking</title>
@@ -12,22 +12,18 @@
         rel="stylesheet">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- JS for the Bootstrap Modal-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div>
-        <div class="settings-message">
-            This Page is under construction.
-        </div>
-        <div>
-            <button class="logout-button" onclick="logout()">Log Out</button>
-            </br>
+
+    <div class="container jumbo-ctnr">
+        <div class="jumbotron">
+            MY BUDDIES
         </div>
     </div>
-
+    <div class="well" id="friends-list">
+        <p id="friends-list-content"></p>
+    </div>
     <div class="btn-group">
         <button onclick="goTo('dashboard.html')" type="button" class="menu-btn">
             <i class="material-icons icon">
@@ -39,19 +35,19 @@
                 show_chart
             </i>
         </button>
-        <button onclick="goTo('friends.html')"type="button" class="menu-btn">
+        <button type="button" class="menu-btn">
             <i class="material-icons icon">
                 people
             </i>
         </button>
-        <button type="button" class="menu-btn">
+        <button onclick="goTo('settings.html')" type="button" class="menu-btn">
             <i class="material-icons icon">
                 settings
             </i>
         </button>
     </div>
 
-    <script src="settings.js"></script>
+    <script src="friends.js"></script>
 </body>
 
 </html>

@@ -5,22 +5,46 @@ body{
 }
 
 /*Login/Register Page (index.html)*/
+.login-body{
+    background-color:#009da5!important;
+    
+}
 .login-message-ctnr{
     padding:100px 20px 100px 20px;
+    color:rgb(236, 234, 234);
+    text-shadow:4px 4px #00565A;
 }
 .login-message{
     margin:auto;
     font-size:90px;
     text-align:center;
 }
+.login-modal{
+    width:100%;
+}
+.login-modal p{
+    font-size:80px;
+}
+.login-modal button{
+    font-size:60px;
+}
+.login-modal-dialog{
+    width:90%!important;
+    margin-top:40%!important; 
+}
+
 .login-button{
     font-size:80px;
     margin-top:80px;
     background-color: #eee;
     padding: 15px;
+    background-color:#e53771;
+    border:none;
+    box-shadow:4px 4px #00565A ;
+    color:rgb(236, 234, 234);
 }
 .login-button:active{
-    background-color: lightgray;
+    background-color: #A72953;
 }
 .login-buttons-ctnr{
     padding:20%;
@@ -67,6 +91,7 @@ body{
 
 
 /* Dashboard and the rest*/
+
 .jumbotron{
     text-align: center;
     font-size: 85px;
@@ -207,6 +232,11 @@ body{
 .event-action-btn-group{
     margin-top: 100px;
     margin-bottom: 95px;
+    text-align:center;
+}
+.event-action-btn-group button i{
+    font-size:60px;
+    margin-bottom:-30px;
 }
 .add-buddy-button{
     font-size: 70px;
@@ -229,6 +259,7 @@ body{
 .exit-event-button:active{
     background-color: lightgray;
 }
+
 .drink-img{
     height: 75%;
     width: 75%;
@@ -242,6 +273,12 @@ body{
 /*Settings Page*/
 .settings-message{
     font-size:60px;
+}
+.logout-button{
+    font-size:80px;
+    margin-top:80px;
+    background-color: #eee;
+    padding: 15px;
 }
 
 /*      Stats Page      */

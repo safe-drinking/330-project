@@ -27,7 +27,6 @@ function listEvents() {
         var i;
         for (i = 0; i < events; i++) {
             var eventName = localStorage.getItem("event_" + i);
-            console.log(eventName);
             document.getElementById("events-list-content").innerHTML +=
                 "<button onclick='openEvent("+i+")' id='" + i + "'>" + eventName + "</button></br>";
         }
@@ -41,6 +40,10 @@ function goTo(location){
 
 function goSettings(){
     document.location.href = "settings.html";
+}
+
+function goFriends(){
+    document.location.href = "friends.html";
 }
 
 init();

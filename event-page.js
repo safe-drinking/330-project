@@ -23,7 +23,7 @@ function init() {
 }
 
 function addDrink() {
-    bac = bac + 0.03;
+    bac = Math.round((bac + 0.03) * 100)/100;
     localStorage.setItem("bac_" + eventName, bac);
     setBAC();
 }
@@ -33,6 +33,8 @@ function addEvent() {
     events++;
     localStorage.setItem("events", events);
 
+}
+function addBuddy(){
 }
 
 function changeName() {
