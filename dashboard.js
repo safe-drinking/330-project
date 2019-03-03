@@ -43,4 +43,8 @@ function goSettings(){
     document.location.href = "settings.html";
 }
 
+function goFriends(){
+    document.location.href = "friends.html";
+}
+
 init();

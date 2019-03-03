@@ -63,7 +63,8 @@
                     <p>Consider switching to soda for the rest of this event.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" onclick="closeWarning()" class="btn btn-default submit-btn" data-dismiss="modal">Dismiss</button>
+                    <button type="submit" onclick="closeWarning()" class="btn btn-default submit-btn"
+                        data-dismiss="modal">Dismiss</button>
                 </div>
             </div>
         </div>
@@ -98,8 +99,18 @@
     </div>
 
     <div class="event-action-btn-group">
-        <button class="add-buddy-button">Add A Buddy</button>
-        <button onclick="closeEvent('dashboard.html')" class="exit-event-button">Done</button>
+        <button class="add-buddy-button">
+            <i class="material-icons">
+                add
+            </i>
+            Buddy
+        </button>
+        <button onclick="closeEvent('dashboard.html')" class="exit-event-button">
+            <i class="material-icons">
+                check
+            </i>
+            Done
+        </button>
     </div>
 
     <div class="btn-group">

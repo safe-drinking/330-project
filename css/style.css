@@ -207,6 +207,11 @@ body{
 .event-action-btn-group{
     margin-top: 100px;
     margin-bottom: 95px;
+    text-align:center;
+}
+.event-action-btn-group button i{
+    font-size:60px;
+    margin-bottom:-30px;
 }
 .add-buddy-button{
     font-size: 70px;
@@ -229,6 +234,7 @@ body{
 .exit-event-button:active{
     background-color: lightgray;
 }
+
 .drink-img{
     height: 75%;
     width: 75%;
