@@ -85,5 +85,8 @@ function setBAC() {
 function goSettings(){
     document.location.href = "settings.html";
 }
+function goTo(location){
+    document.location.href = location;
+}
 
 init();

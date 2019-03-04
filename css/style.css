@@ -7,7 +7,6 @@ body{
 /*Login/Register Page (index.html)*/
 .login-body{
     background-color:#009da5!important;
-    
 }
 .login-message-ctnr{
     padding:100px 20px 100px 20px;
@@ -36,12 +35,12 @@ body{
 .login-button{
     font-size:80px;
     margin-top:80px;
-    background-color: #eee;
     padding: 15px;
     background-color:#e53771;
     border:none;
     box-shadow:4px 4px #00565A ;
-    color:rgb(236, 234, 234);
+    color:rgb(226, 226, 226);
+    /*color:black;*/
 }
 .login-button:active{
     background-color: #A72953;
@@ -91,7 +90,9 @@ body{
 
 
 /* Dashboard and the rest*/
-
+.dashboard-body{
+    background-color:#009da5!important;
+}
 .jumbotron{
     text-align: center;
     font-size: 85px;
@@ -99,6 +100,7 @@ body{
     margin-top: 10px;
     padding-top: 30px !important;
     padding-bottom: 30px !important;
+    background-color: #80BABD!important;
 }
 .jumbo-ctnr{
     width:90%!important;
@@ -108,10 +110,13 @@ body{
 }
 .new-event-btn{
     font-size: 70px!important;
-    background-color:#eee;
+    background-color:#E53771;
     border-radius: 5px;
     padding: 10px 20px 10px 20px;
     color:black;
+    border:none;
+    box-shadow:4px 4px #00565A ;
+
 }
 .new-event-btn:active{
     background-color: lightgray;
@@ -126,10 +131,11 @@ body{
 .events-ctnr{
     width:90%!important;
 }
-.well{
+.dashboard-well{
     font-size: 40px;
     height: 750px;
     overflow-y: scroll;
+    background-color: #80BABD!important;
 }
 #events-list-content button{
     background-color: #eee;
@@ -140,9 +146,12 @@ body{
     background-color: lightgray;
 }
 .clear-events-btn{
-    background-color: #eee;
+    background-color: #E53771;
     margin-left: 480px;
     padding: 15px;
+    border:none;
+    box-shadow:4px 4px #00565A ;
+    color:black;
 }
 .clear-events-btn:active{
     background-color: lightgray;
@@ -152,7 +161,7 @@ body{
 }
 .btn-group button{
     padding:20px 30px 20px 30px;
-    background-color:#eee;
+    background-color: #A8CFD1;
     border:none;
 }
 .btn-group button:active{
