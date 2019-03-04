@@ -20,13 +20,17 @@ function register(){
 function setSex(){
     var buttons = document.getElementsByName('optradio');
     for(var i = 0;i < buttons.length;i ++) {
-        if(buttons[i].checked == true) gender = buttons[i].value;
+        if(buttons[i].checked == true) {
+            gender = buttons[i].value;
+        }
     }
+    localStorage.setItem("gender", gender);
 }
 
 function setWeight(){
-    var weight = document.getElementsByClassName('height-input')[2].value;
-    console.log(weight); 
+    weight = document.getElementsByClassName('height-input')[2].value;
+    localStorage.setItem("weight", weight);
 }
+
 
 init();

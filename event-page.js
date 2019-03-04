@@ -8,9 +8,13 @@ var SD;
 var BW;
 var Wt;
 var MR;
-var DP;
+var alt_bac;
+var gender;
+var weight;
 
 function init() {
+    gender = localStorage.getItem("gender");
+    weight = localStorage.getItem("weight");
     events = localStorage.getItem("events");
     eventName = localStorage.getItem("thisEvent");
     localStorage.setItem("notify", "0");
@@ -31,10 +35,12 @@ function init() {
 }
 
 function addDrink() {
-    bac = Math.round((bac + 0.03) * 100)/100;
+    drinks++;
+    localStorage.setItem("drinks", drinks);
+    bac = updateBAC();
+    bac = Math.round((bac) * 100)/100;
     localStorage.setItem("bac_" + eventName, bac);
     setBAC();
-    drinks++;
 }
 
 function addEvent() {
@@ -97,10 +103,11 @@ function goSettings(){
 
 function updateBAC(){
     SD = drinks;
-    BW = (.49 + (gender * .09));
-    Wt = weight;
-    MR = (.017 + (gender * -.02));
-    BAC = ((.806 * SD * 1.2)/(BW * Wt) - MR) * 10;
+    BW = (.50 + (gender * .09));
+    Wt = 0.453592*weight;
+    MR = (.020 + (gender * (-.02)));
+    BAC = (((.806 * SD * 1.2)/(BW * Wt)) - MR);
+    return BAC;
 }
 
 

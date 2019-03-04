@@ -4,9 +4,9 @@ function goTo(location){
 
 var years = [0,1,2,3,4,5,6,7,8,9];
 // For drawing the lines
-var year = [4,5,8,7,6,7,4,4,3,2];
-var month = [6,8,7,5,7,4,5,6,4,3];
-var week = [3,4,5,8,9,9,5,4,2,3];
+var year = [4,5,8,7,6,7,4,4,3, localStorage.getItem("drinks")];
+var month = [6,8,7,5,7,4,5,6,4, localStorage.getItem("drinks")];
+var week = [3,4,5,8,9,9,5,4,2, localStorage.getItem("drinks")];
 var data_values = [year, month, week];
 var data_types = ['year', 'month', 'week'];
 
