@@ -289,6 +289,7 @@ body{
     height: 315px;
     display: flex;
     background-color:#A8CFD1;
+    height: 935px;
 }
 .material-icons.settings-icon{
     font-size: 300px;
@@ -307,6 +308,7 @@ body{
     margin-top:80px;
     background-color:#E53771;
     padding: 15px;
+    border:none;
     margin: 40px;
     box-shadow:4px 4px #00565A;
 }
