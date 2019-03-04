@@ -2,6 +2,13 @@ var events;
 var bac;
 var eventName;
 var title;
+var drinks;
+
+var SD;
+var BW;
+var Wt;
+var MR;
+var DP;
 
 function init() {
     events = localStorage.getItem("events");
@@ -14,6 +21,7 @@ function init() {
         document.getElementById("event-title").innerHTML = title;
     }
     else {
+        drinks = 0;
         bac = 0;
         title = "New Event"
         document.getElementById("event-title").innerHTML = title;
@@ -26,6 +34,7 @@ function addDrink() {
     bac = Math.round((bac + 0.03) * 100)/100;
     localStorage.setItem("bac_" + eventName, bac);
     setBAC();
+    drinks++;
 }
 
 function addEvent() {
@@ -85,5 +94,14 @@ function setBAC() {
 function goSettings(){
     document.location.href = "settings.html";
 }
+
+function updateBAC(){
+    SD = drinks;
+    BW = (.49 + (gender * .09));
+    Wt = weight;
+    MR = (.017 + (gender * -.02));
+    BAC = ((.806 * SD * 1.2)/(BW * Wt) - MR) * 10;
+}
+
 
 init();

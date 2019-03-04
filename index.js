@@ -1,5 +1,7 @@
 var events = 0;
 var friends = 4;
+var gender;
+var weight;
 
 function init(){
     localStorage.clear();
@@ -13,6 +15,18 @@ function login(){
 
 function register(){
     document.location.href = "dashboard.html";
+}
+
+function setSex(){
+    var buttons = document.getElementsByName('optradio');
+    for(var i = 0;i < buttons.length;i ++) {
+        if(buttons[i].checked == true) gender = buttons[i].value;
+    }
+}
+
+function setWeight(){
+    var weight = document.getElementsByClassName('height-input')[2].value;
+    console.log(weight); 
 }
 
 init();
