@@ -11,6 +11,7 @@ var data_values = [year, month, week];
 var data_types = ['year', 'month', 'week'];
 var view_type = 2; // 0=>year, 1=>month, 2=>week
 var cum;
+var avg;
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
@@ -52,7 +53,7 @@ function pillClick(num){
         document.getElementById(x).className = "inactive";
     });
     document.getElementById(pills[num]).className = "active";
-    view_type = document.getElementById(pills[num]).value;
+    
 
     alerts.forEach(function(x){
         document.getElementById(x).innerHTML = data_types[num];
@@ -60,6 +61,9 @@ function pillClick(num){
 
     removeData(myChart);
     addData(myChart, data_types[num], data_values[num]);
+    view_type = document.getElementById(pills[num]).value;
+    updateCum();
+    updateAvg();
 }
 
 function addData(chart, label, data_p) {
@@ -84,8 +88,13 @@ function getSum(total, num) {
     return total + num;
 }
 
+function updateAvg(){
+    avg = cum/(data_values[view_type].length);
+}
+
 function init(){
     updateCum();
+    updateAvg();
 }
 
 
