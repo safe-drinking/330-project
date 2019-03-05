@@ -36,7 +36,9 @@ function addEvent() {
 }
 function addBuddy(){
     document.getElementById("friendsModal").style = 'display: inline';
+    //call list friends function
 }
+
 function closeFriendsModal(){
     document.getElementById("friendsModal").style = 'display: none';
 }
