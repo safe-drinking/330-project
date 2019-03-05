@@ -11,6 +11,10 @@ function init() {
     events = localStorage.getItem("events");
     eventName = localStorage.getItem("thisEvent");
     friends = Number(localStorage.getItem("friends"));
+    currentClickedBuddy = (localStorage.getItem("event_" + eventName + "_buddy") ?
+        localStorage.getItem("event_" + eventName + "_buddy") :
+        "no one");
+    document.getElementById("shared-friend-name").innerHTML = currentClickedBuddy;
     var i;
     for (i = 0; i < friends; i++) {
         friendsList[i] = localStorage.getItem("friend_" + i);
@@ -48,13 +52,9 @@ function addBuddy() {
     listFriends();
 }
 function shareBuddy() {
-    var i;
-    for (i = 0; i < friends; i++) {
-        var orange = document.getElementById("add_buddy_friend_" + i).value;
-    }
-
     closeFriendsModal();
-    localStorage.setItem("event_"+eventName+"_buddy", currentClickedBuddy);
+    localStorage.setItem("event_" + eventName + "_buddy", currentClickedBuddy);
+    document.getElementById("shared-friend-name").innerHTML = currentClickedBuddy;
 }
 function listFriends() {
     if (friends == 0) {
@@ -65,7 +65,7 @@ function listFriends() {
         for (i = 0; i < friends; i++) {
             var buddyName = String(friendsList[i]);
             document.getElementById("add-buddy-friends-list").innerHTML +=
-                "<div class='radio'><label class='modal-opt'><input value='" + buddyName + "' onclick='handleRadioClick(this.value)' id='add_buddy_friend_" + i + "' type='radio' name='optradio'>" + buddyName + "</label></div>";
+                "<div class='radio'><label class='add-buddy-modal-opt'><input value='" + buddyName + "' onclick='handleRadioClick(this.value)' id='add_buddy_friend_" + i + "' type='radio' name='optradio'>" + buddyName + "</label></div>";
         }
     }
 }
