@@ -74,10 +74,6 @@ function pillClick(num){
     document.getElementById(pills[num]).className = "active";
     
 
-    alerts.forEach(function(x){
-        document.getElementById(x).innerHTML = data_types[num];
-    });
-
     removeData(myChart);
     addData(myChart, data_labels[num], data_values[num], data_types[num], x_labels[num]);
     view_type = document.getElementById(pills[num]).value;
