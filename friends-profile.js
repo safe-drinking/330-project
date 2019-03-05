@@ -18,8 +18,12 @@ function goTo(location) {
 
 function deleteFriend() {
     localStorage.removeItem(name_id);
-    localStorage.setItem("friends",friends--);
-    
+    friends--;
+    localStorage.setItem("friends",friends);
+    var i = parseInt(name_id);//name_id.substr(7,3);
+    for (i; i < friends; i++) {
+        localStorage.setItem("friend_" + i, "friend_" + (i+1));
+    }
     goTo("friends.html");
 }
 
