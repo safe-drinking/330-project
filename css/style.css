@@ -245,9 +245,9 @@ body{
     border: solid 3px black;
     background-color: white;
     width: 33%;
-    margin: 5px;
+    margin: 10px;
     padding: 10px 0px 10px 0px;
-    box-shadow: 2px 2px;
+    box-shadow: 8px 8px #00565A;
 }
 .drinks-btn-container:active{
     box-shadow: 0px 0px;
