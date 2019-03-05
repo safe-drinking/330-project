@@ -4,9 +4,9 @@ function goTo(location){
 
 var years = [0,1,2,3,4,5,6,7,8,9];
 // For drawing the lines
-var year = [4,5,8,7,6,7,4,4,3, localStorage.getItem("drinks")];
-var month = [6,8,7,5,7,4,5,6,4, localStorage.getItem("drinks")];
-var week = [3,4,5,8,9,9,5,4,2, localStorage.getItem("drinks")];
+var year = [4,5,8,7,6,7,4,4,3, parseInt(localStorage.getItem("drinks"), 10)];
+var month = [6,8,7,5,7,4,5,6,4, parseInt(localStorage.getItem("drinks"), 10)];
+var week = [3,4,5,8,9,9,5,4,2, parseInt(localStorage.getItem("drinks"), 10)];
 var data_values = [year, month, week];
 var data_types = ['year', 'month', 'week'];
 var view_type = 2; // 0=>year, 1=>month, 2=>week
@@ -77,5 +77,16 @@ function removeData(chart) {
 }
 
 function updateCum(){
-    cum = data_values[view_type].reduce(getSum);   
+    cum = data_values[view_type].reduce(getSum, 0);
 } 
+
+function getSum(total, num) {
+    return total + num;
+}
+
+function init(){
+    updateCum();
+}
+
+
+init();
