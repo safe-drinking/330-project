@@ -30,6 +30,7 @@ function addBuddyName() {
     friends++;
     localStorage.setItem("friends", friends);
     document.getElementById('buddy-name').value = "";
+    document.getElementById('buddy-email').value = "";
 }
 
 function closeAddModal() {
@@ -44,10 +45,15 @@ function listFriends() {
         var i;
         for (i = 0; i < friends; i++) {
             document.getElementById("friends-list-content").innerHTML +=
-                "<button class='friend-btn' id= friend_'" + i + "'>" + String(friendsList[i]) + "</button></br>";
+                "<button onclick=openFriendProfile(this.id) class='friend-btn' id= friend_'" + i + "'>" + String(friendsList[i]) + "</button></br>";
         }
 
     }
+}
+
+function openFriendProfile(clicked_id) {
+    localStorage.setItem("thisFriend",clicked_id);
+    goTo("friends-profile.html");
 }
 
 //onclick=goTo('friends-" + friendsList[i] + ".html')

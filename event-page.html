@@ -74,23 +74,30 @@
         <div class="modal-dialog event-modal-dialog">
 
             <!-- Modal Content-->
-            <div class="modal-content event-modal-content">
+            <div class="modal-content add-buddy-modal-content">
                 <div class="modal-header">
-                    <button onclick="closeFriendsModal()"type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button onclick="closeFriendsModal()" type="button" class="close"
+                        data-dismiss="modal">&times;</button>
                     <p class="modal-title">Practice safe drinking with a friend!</p>
                 </div>
                 <div class="add-buddy-modal-body">
                     <p>Share this event with one of your buddies.</p>
-                    <div id="friends-list">
-                        
+                    <div id="add-buddy-friends-list">
+                        <div class="form-group">
+                            <!--<div class="radio">
+                                <label class="modal-opt"><input type="radio" name="optradio">Male</label>
+                            </div>
+                            <div class="radio">
+                                <label class="modal-opt"><input type="radio" name="optradio">Female</label>
+                            </div>
+                        -->
+                        </div>
                     </div>
                 </div>
-                <!--
                 <div class="modal-footer">
-                    <button  type="submit" class="btn btn-default submit-btn"
-                        data-dismiss="modal">Save</button>
+                    <button onclick="shareBuddy()" type="submit" class="btn btn-default submit-btn"
+                        data-dismiss="modal">Share</button>
                 </div>
-            -->
             </div>
         </div>
     </div>
