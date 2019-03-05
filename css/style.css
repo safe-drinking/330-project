@@ -1,4 +1,14 @@
-
+:root{
+    --body-color:#009da5;
+    --shadow-color:#00565A;
+    --well-color:#80BABD;
+    --highlight-well-color:#A0CBCD;
+    --primary-button-color:#e53771;
+    --primary-button-pressed-color:#A72953;
+    --secondary-button-color:pink;
+    --font-color:black;
+    --menu-buttons-color:#A0CBCD;
+}
 /* JACOB, make the Beer, wine, liquor buttons this color: #FFBC3F, it might look back but try different shades of yellow*/
 body{
     font-family: 'Nunito', sans-serif !important;
@@ -8,12 +18,12 @@ body{
 
 /*Login/Register Page (index.html)*/
 .login-body{
-    background-color:#009da5!important;
+    background-color: var(--body-color) !important;
 }
 .login-message-ctnr{
     padding:100px 20px 100px 20px;
     color:rgb(236, 234, 234);
-    text-shadow:4px 4px #00565A;
+    text-shadow:4px 4px var(--shadow-color);
 }
 .login-message{
     margin:auto;
@@ -41,20 +51,22 @@ body{
     border-top: 3px solid lightgray !important;
     background-color:#eee!important;
 }
-.modal-body{;
+.modal-body{
+    padding-top:150px!important;
+    padding-bottom:150px!important;
 }
 .login-button{
     font-size:80px;
     margin-top:80px;
     padding: 15px;
-    background-color:#e53771;
+    background-color:var(--primary-button-color);
     border:none;
-    box-shadow:4px 4px #00565A ;
+    box-shadow:4px 4px var(--shadow-color);
     /*color:rgb(226, 226, 226);*/
-    color:black;
+    color:var(--font-color);
 }
 .login-button:active{
-    background-color: #A72953;
+    background-color: var(--primary-button-pressed-color);
 }
 .login-buttons-ctnr{
     padding:20%;
@@ -102,7 +114,7 @@ body{
 
 /* Dashboard and the rest*/
 .dashboard-body{
-    background-color:#009da5!important;
+    background-color:var(--body-color)!important;
 }
 .jumbotron{
     text-align: center;
@@ -111,7 +123,7 @@ body{
     margin-top: 10px;
     padding-top: 30px !important;
     padding-bottom: 30px !important;
-    background-color: #80BABD!important;
+    background-color: var(--well-color)!important;
 }
 .jumbo-ctnr{
     width:90%!important;
@@ -121,16 +133,16 @@ body{
 }
 .new-event-btn{
     font-size: 70px!important;
-    background-color:#E53771;
+    background-color:var(--primary-button-color);
     border-radius: 5px;
     padding: 10px 20px 10px 20px;
-    color:black;
+    color:var(--font-color);
     border:none;
-    box-shadow:4px 4px #00565A ;
+    box-shadow:4px 4px var(--shadow-color);
 
 }
 .new-event-btn:active{
-    background-color: #A72953;
+    background-color: var(--primary-button-pressed-color);
 }
 .new-event-btn p{
     margin:0px;
@@ -138,7 +150,7 @@ body{
 
 .events-ctnr p{
     font-size: 60px;
-    color:black;
+    color:var(--font-color);
 }
 .events-ctnr{
     width:90%!important;
@@ -147,38 +159,38 @@ body{
     font-size: 40px;
     height: 758px;
     overflow-y: scroll;
-    background-color: #80BABD!important;
+    background-color: var(--well-color)!important;
 }
 #events-list-content button{
-    background-color: #E95B8A;
+    background-color: var(--secondary-button-color);
     margin-bottom: 15px;
     padding: 10px;
     border:none;
-    box-shadow:4px 4px #00565A ;
-    color:black;
+    box-shadow:4px 4px var(--shadow-color);
+    color:var(--font-color);
 }
 #events-list-content button:active{
-    background-color: #A72953;
+    background-color: var(--primary-button-pressed-color);
 }
 .clear-events-btn{
-    background-color: #E53771;
+    background-color: var(--primary-button-color);
     margin-left: 480px;
     padding: 10px 10px 10px 10px;
     border:none;
-    box-shadow:4px 4px #00565A ;
-    color:black;
+    box-shadow:4px 4px var(--shadow-color);
+    color:var(--font-color);
 }
 .clear-events-btn:active{
-    background-color: #A72953;
+    background-color:var(--primary-button-pressed-color);
 }
 .menu-btn .icon{
     font-size: 140px;
 }
 .btn-group button{
     padding:20px 30px 20px 30px;
-    background-color: #A8CFD1;
+    background-color: var(--menu-buttons-color);
     border:none;
-    box-shadow: 4px 4px #3B7679;
+    box-shadow: 4px 4px var(--shadow-color);
 }
 .btn-group button:active{
     background-color: lightgray;
@@ -189,7 +201,7 @@ body{
 
 /*Event page*/
 .event-page-body{
-    background-color:#009da5!important;
+    background-color:var(--body-color)!important;
 }
 .event-modal{
     width:100%;
@@ -203,15 +215,14 @@ body{
     height:100px!important;
 }
 .event-title-btn{
-    background-color: #51A1A5;
-    background-color:#E95B8A;
+    background-color:var(--secondary-button-color);
     padding: 10px;
     border:none;
-    box-shadow: 4px 4px #00565A;
-    color:black;
+    box-shadow: 4px 4px var(--shadow-color);
+    color:var(--font-color);
 }
 .event-title-btn:active{
-    background-color: #A72953;
+    background-color: var(--primary-button-pressed-color);
 }
 .event-modal-content{
     height:700px!important;
@@ -222,20 +233,17 @@ body{
 .event-modal button{
     font-size:60px;
 }
-.modal-body{
-    padding-top:150px!important;
-    padding-bottom:150px!important;
-}
-.modal-body p{
-    font-size:60px;
+.warning-modal-body p{
+    font-size:50px;
 }
 .warning-modal-body{
-    padding-top:20px!important;
-    padding-bottom:20px!important;
+    padding-top:100px!important;
+    padding-bottom:100px!important;
+    
 }
 .bac-checker{
     font-size:85px;
-    background-color:white;
+    background-color:var(--highlight-well-color);
     display: flex;
     justify-content: center;
     margin: 70px 200px 70px 200px;
@@ -257,7 +265,7 @@ body{
     width: 33%;
     margin: 10px;
     padding: 10px 0px 10px 0px;
-    box-shadow: 8px 8px #00565A;
+    box-shadow: 8px 8px var(--shadow-color);
 }
 .drinks-btn-container:active{
     box-shadow: 0px 0px;
@@ -274,15 +282,15 @@ body{
 }
 .add-buddy-button{
     font-size: 70px;
-    background-color: #E53771;
+    background-color:var(--primary-button-color);
     margin: 70px;
     padding: 20px;
     border:none;
-    box-shadow:4px 4px #00565A ;
-    color:black;
+    box-shadow:4px 4px var(--shadow-color);
+    color:var(--font-color);
 }
 .add-buddy-button:active{
-    background-color: #A72953;
+    background-color: var(--primary-button-pressed-color);
 }
 
 .add-buddy-modal-body p{
@@ -308,15 +316,15 @@ body{
 }
 .exit-event-button{
     font-size: 70px;
-    background-color: #E53771;
+    background-color: var(--primary-button-color);
     margin: 70px;
     padding: 20px;
     border:none;
-    box-shadow:4px 4px #00565A ;
-    color:black;
+    box-shadow:4px 4px var(--shadow-color);
+    color:var(--font-color);
 }
 .exit-event-button:active{
-    background-color: #A72953;
+    background-color: var(--primary-button-pressed-color);
 }
 .drink-img{
     height: 75%;
@@ -328,7 +336,7 @@ body{
     margin: 35px;
 }
 .shared-friend-ctnr{
-    background-color:white;
+    background-color:var(--highlight-well-color);
 }
 .shared-friend-ctnr p{
     font-size: 50px;
@@ -340,20 +348,20 @@ body{
 }
 /* Friends Page */
 .friends-body{
-    background-color:#009da5!important;
+    background-color:var(--body-color)!important;
 }
 .friend-btn{
     font-size: 60px;
-    background-color:#E95B8A;
+    background-color:var(--secondary-button-color);
     border:none;
-    box-shadow:4px 4px #00565A ;
+    box-shadow:4px 4px var(--shadow-color);
     /*color:rgb(226, 226, 226);*/
-    color:black;
+    color:var(--font-color);
     margin: 20px 0px 10px 20px;
     padding: 10px;
 }
 .friend-btn:active{
-    background-color:#A72953;
+    background-color:var(--primary-button-pressed-color);
 }
 #friends-list{
     height:1083px;
@@ -364,20 +372,20 @@ body{
 }
 .add-friend-btn{
     font-size: 60px;
-    background-color:#E53771;
+    background-color:var(--primary-button-color);
     border:none;
-    box-shadow:4px 4px #00565A ;
+    box-shadow:4px 4px var(--shadow-color);
     /*color:rgb(226, 226, 226);*/
-    color:black;
+    color:var(--font-color);
     margin: 10px 0px 10px 0px;
     padding: 10px;
 }
 .add-friend-btn:active{
-    background-color:#A72953;
+    background-color:var(--primary-button-pressed-color);
 }
 .friends-well{
     margin:10px 40px 0px 40px;
-    background-color: #80BABD!important;
+    background-color: var(--well-color)!important;
     overflow-y:scroll;
 }
 .add-modal-body{
@@ -386,7 +394,7 @@ body{
 
 /*Friend Page - Profile */
 .friends-profile-body{
-    background-color:#009da5!important;
+    background-color:var(--body-color)!important;
 }
 .friends-header-info{
     width: 852px;
@@ -394,7 +402,7 @@ body{
     height: 315px;
     display: flex;
     flex-wrap: wrap;
-    background-color:#A8CFD1;
+    background-color:var(--well-color);
     height: 936px;
 }
 .material-icons.friends-icon{
@@ -431,26 +439,26 @@ body{
     width: 900px;
     font-size:80px;
     margin-top:80px;
-    background-color:#E53771;
+    background-color:var(--primary-button-color);
     padding: 15px;
     border:none;
     margin: 40px;
-    box-shadow:4px 4px #00565A;
+    box-shadow:4px 4px var(--shadow-color);
 }
 .friend-back-button:active{
-    background-color:#A72953;
+    background-color:var(--primary-button-pressed-color);
 }
 
 /*Settings Page*/
 .settings-body{
-    background-color:#009da5!important;
+    background-color:var(--body-color)!important;
 }
 .settings-header-info{
     width: 852px;
     margin: 40px 60px 40px 60px;
     height: 315px;
     display: flex;
-    background-color:#A8CFD1;
+    background-color:var(--well-color);
     height: 936px;
 }
 .material-icons.settings-icon{
@@ -472,18 +480,18 @@ body{
     width: 900px;
     font-size:80px;
     margin-top:80px;
-    background-color:#E53771;
+    background-color:var(--primary-button-color);
     padding: 15px;
     border:none;
     margin: 40px;
-    box-shadow:4px 4px #00565A;
-    color:black;
+    box-shadow:4px 4px var(--shadow-color);
+    color:var(--font-color);
 }
 .logout-button:active{
-    background-color:#A72953;
+    background-color:var(--primary-button-pressed-color);
 }
 
-/*      Stats Page      */
+/* Stats Page */
 
 .footer {
     position: fixed;
@@ -492,19 +500,16 @@ body{
     margin-bottom: 25px;
     width: 100%;
     text-align: center;
-  }
-
+}
 .my-pill {
     font-size: 50px;
     display: flex;
     justify-content: flex-end;
     margin-right: 65px;
 }
-
 .my-chart {
     padding: 40px;
 }
-
 .my-alert {
     font-size: 40px;
     margin: 40px;
