@@ -73,7 +73,7 @@ body{
 .modal-opt input{
     border: 0px;
     width:10%;
-    height: .55em;
+    height: .6em;
     margin-top:25px!important;
     margin-left:-80px!important;
 }
@@ -235,18 +235,19 @@ body{
 }
 .bac-checker{
     font-size:85px;
+    background-color:white;
     display: flex;
     justify-content: center;
-    margin: 70px;
+    margin: 70px 200px 70px 200px;
 }
 #bac-value{
     margin-left: 20px;
-    text-decoration: underline;
+    font-weight:bold;
 }
 .drinks-btn-group{
     display: flex;
     justify-content: center;
-    margin: 100px 40px 68px 40px;
+    margin: 100px 40px 66px 40px;
 }
 .drinks-btn-container{
     font-size: 50px;
@@ -295,7 +296,7 @@ body{
 .add-buddy-modal-opt input{
     border: 0px;
     width:10%;
-    height: .55em;
+    height: .6em;
     margin-top:20px!important;
     margin-left:-80px!important;
 }
@@ -476,6 +477,7 @@ body{
     border:none;
     margin: 40px;
     box-shadow:4px 4px #00565A;
+    color:black;
 }
 .logout-button:active{
     background-color:#A72953;
