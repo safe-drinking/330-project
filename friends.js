@@ -26,7 +26,7 @@ function addBuddyName() {
         document.getElementById('buddy-name').value);
     friendsList[friends] = document.getElementById('buddy-name').value;
     document.getElementById("friends-list-content").innerHTML +=
-        "<button onclick=openFriendProfile(this.id) class='friend-btn' id= friend_'" + friends + "'>" + String(friendsList[friends]) + "</button></br>";
+        "<button onclick=openFriendProfile(this.id) class='friend-btn' id= friend_" + friends + ">" + String(friendsList[friends]) + "</button></br>";
     friends++;
     localStorage.setItem("friends", friends);
     document.getElementById('buddy-name').value = "";
@@ -55,8 +55,6 @@ function openFriendProfile(clicked_id) {
     localStorage.setItem("thisFriend",clicked_id);
     goTo("friends-profile.html");
 }
-
-//onclick=goTo('friends-" + friendsList[i] + ".html')
 
 
 init();
