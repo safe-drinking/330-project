@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<!--will likely need to change the index.html page to be the login landing page in the future.-->
+
+<head>
+    <title>Safe Drinking</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Montserrat|Nunito|Quicksand|Source+Sans+Pro"
+        rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="friends-amy-body">
+
+    <div class="container jumbo-ctnr">
+        <div class="jumbotron">
+            My Buddies
+        </div>
+    </div>
+
+    <div class="friends-header-info">
+        <i class="material-icons friends-icon">
+            account_circle
+        </i>
+        <p id="friend-name">
+            Amy Deer
+        </p>
+    </div>
+
+    <!--
+        <div class="settings-main-info">
+
+        </div>
+    -->
+    
+
+    <button class="friend-back-button" onclick="goTo('friends.html')">Back</button>
+
+    <div class="btn-group">
+        <button onclick="goTo('dashboard.html')" type="button" class="menu-btn">
+            <i class="material-icons icon">
+                home
+            </i>
+        </button>
+        <button onclick="goTo('stats-page.html')" type="button" class="menu-btn">
+            <i class="material-icons icon">
+                show_chart
+            </i>
+        </button>
+        <button onclick="goTo('friends.html')" type="button" class="menu-btn">
+            <i class="material-icons icon">
+                people
+            </i>
+        </button>
+        <button onclick="goTo('settings.html')" type="button" class="menu-btn">
+            <i class="material-icons icon">
+                settings
+            </i>
+        </button>
+    </div>
+
+    <script src="friends-amy.js"></script>
+</body>
+
+</html>

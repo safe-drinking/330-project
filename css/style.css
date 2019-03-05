@@ -154,7 +154,7 @@ body{
 .clear-events-btn{
     background-color: #E53771;
     margin-left: 480px;
-    padding: 15px;
+    padding: 10px 10px 10px 10px;
     border:none;
     box-shadow:4px 4px #00565A ;
     color:black;
@@ -311,6 +311,7 @@ body{
     /*color:rgb(226, 226, 226);*/
     color:black;
     margin: 20px 0px 10px 20px;
+    padding: 10px;
 }
 .friend-btn:active{
     background-color:#A72953;
@@ -338,7 +339,45 @@ body{
 .friends-well{
     margin:10px 40px 0px 40px;
     background-color: #80BABD!important;
+    overflow-y:scroll;
 }
+.add-modal-body{
+    padding:100px 20px 100px 20px!important;
+}
+
+/*Friend Page - Amy */
+.friends-amy-body{
+    background-color:#009da5!important;
+}
+.friends-header-info{
+    width: 852px;
+    margin: 40px 60px 40px 60px;
+    height: 315px;
+    display: flex;
+    background-color:#A8CFD1;
+    height: 936px;
+}
+.material-icons.friends-icon{
+    font-size: 300px;
+}
+#friend-name{
+    font-size: 100px;
+    margin: 80px 0px 0px 60px;
+}
+.friend-back-button{
+    width: 900px;
+    font-size:80px;
+    margin-top:80px;
+    background-color:#E53771;
+    padding: 15px;
+    border:none;
+    margin: 40px;
+    box-shadow:4px 4px #00565A;
+}
+.friend-back-button:active{
+    background-color:#A72953;
+}
+
 /*Settings Page*/
 .settings-body{
     background-color:#009da5!important;
@@ -371,6 +410,9 @@ body{
     border:none;
     margin: 40px;
     box-shadow:4px 4px #00565A;
+}
+.logout-button:active{
+    background-color:#A72953;
 }
 
 /*      Stats Page      */
