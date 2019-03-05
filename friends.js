@@ -30,6 +30,7 @@ function addBuddyName() {
     friends++;
     localStorage.setItem("friends", friends);
     document.getElementById('buddy-name').value = "";
+    document.getElementById('buddy-email').value = "";
 }
 
 function closeAddModal() {
