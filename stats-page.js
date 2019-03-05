@@ -17,6 +17,11 @@ var data_types = [year, month, week];
 var data_labels = ['year', 'month', 'week'];
 var x_labels = ['month', 'day', 'day'];
 
+var data_values = [year, month, week];
+var data_types = ['year', 'month', 'week'];
+var view_type = 2; // 0=>year, 1=>month, 2=>week
+var cum;
+
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
   type: 'line',
@@ -66,8 +71,12 @@ function pillClick(num){
         document.getElementById(x).className = "inactive";
     });
     document.getElementById(pills[num]).className = "active";
-    
-    // update the chart data
+    view_type = document.getElementById(pills[num]).value;
+
+    alerts.forEach(function(x){
+        document.getElementById(x).innerHTML = data_types[num];
+    });
+
     removeData(myChart);
     addData(myChart, data_labels[num], data_values[num], data_types[num], x_labels[num]);
 }
@@ -87,3 +96,18 @@ function removeData(chart) {
     chart.data.datasets.pop();
     chart.update();
 }
+
+function updateCum(){
+    cum = data_values[view_type].reduce(getSum, 0);
+} 
+
+function getSum(total, num) {
+    return total + num;
+}
+
+function init(){
+    updateCum();
+}
+
+
+init();
