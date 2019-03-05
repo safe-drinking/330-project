@@ -35,6 +35,10 @@ function addEvent() {
 
 }
 function addBuddy(){
+    document.getElementById("friendsModal").style = 'display: inline';
+}
+function closeFriendsModal(){
+    document.getElementById("friendsModal").style = 'display: none';
 }
 
 function changeName() {

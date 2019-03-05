@@ -1,3 +1,5 @@
+
+/* JACOB, make the Beer, wine, liquor buttons this color: #FFBC3F, it might look back but try different shades of yellow*/
 body{
     font-family: 'Nunito', sans-serif !important;
     /*font-family: 'Quicksand', sans-serif !important;
@@ -39,8 +41,8 @@ body{
     background-color:#e53771;
     border:none;
     box-shadow:4px 4px #00565A ;
-    color:rgb(226, 226, 226);
-    /*color:black;*/
+    /*color:rgb(226, 226, 226);*/
+    color:black;
 }
 .login-button:active{
     background-color: #A72953;
@@ -119,7 +121,7 @@ body{
 
 }
 .new-event-btn:active{
-    background-color: lightgray;
+    background-color: #A72953;
 }
 .new-event-btn p{
     margin:0px;
@@ -127,6 +129,7 @@ body{
 
 .events-ctnr p{
     font-size: 60px;
+    color:black;
 }
 .events-ctnr{
     width:90%!important;
@@ -138,12 +141,15 @@ body{
     background-color: #80BABD!important;
 }
 #events-list-content button{
-    background-color: #eee;
+    background-color: #E95B8A;
     margin-bottom: 15px;
     padding: 10px;
+    border:none;
+    box-shadow:4px 4px #00565A ;
+    color:black;
 }
 #events-list-content button:active{
-    background-color: lightgray;
+    background-color: #A72953;
 }
 .clear-events-btn{
     background-color: #E53771;
@@ -154,7 +160,7 @@ body{
     color:black;
 }
 .clear-events-btn:active{
-    background-color: lightgray;
+    background-color: #A72953;
 }
 .menu-btn .icon{
     font-size: 140px;
@@ -163,6 +169,7 @@ body{
     padding:20px 30px 20px 30px;
     background-color: #A8CFD1;
     border:none;
+    box-shadow: 4px 4px #3B7679;
 }
 .btn-group button:active{
     background-color: lightgray;
@@ -171,6 +178,10 @@ body{
     margin:7% 8% 1% 9%;
 }
 
+/*Event page*/
+.event-page-body{
+    background-color:#009da5!important;
+}
 .event-modal{
     width:100%;
 }
@@ -183,11 +194,14 @@ body{
     height:100px!important;
 }
 .event-title-btn{
-    background-color: #eee;
+    background-color: #51A1A5;
+    background-color:#E95B8A;
     padding: 10px;
+    border:none;
+    box-shadow: 4px 4px #00565A;
 }
 .event-title-btn:active{
-    background-color: lightgray;
+    background-color: #A72953;
 }
 .event-modal-content{
     height:700px!important;
@@ -249,24 +263,28 @@ body{
 }
 .add-buddy-button{
     font-size: 70px;
-    border-radius: 5px;
-    background-color: #eee;
+    background-color: #E53771;
     margin: 70px;
     padding: 20px;
+    border:none;
+    box-shadow:4px 4px #00565A ;
+    color:black;
 }
 .add-buddy-button:active{
     box-shadow: 0px 0px;
-    background-color: lightgray;
+    background-color: #A72953;
 }
 .exit-event-button{
     font-size: 70px;
-    border-radius: 5px;
-    background-color: #eee;
+    background-color: #E53771;
     margin: 70px;
     padding: 20px;
+    border:none;
+    box-shadow:4px 4px #00565A ;
+    color:black;
 }
 .exit-event-button:active{
-    background-color: lightgray;
+    background-color: #A72953;
 }
 
 .drink-img{
@@ -278,7 +296,46 @@ body{
     width: 60%;
     margin: 35px;
 }
-
+/* Friends Page */
+.friends-body{
+    background-color:#009da5!important;
+}
+.friend-btn{
+    font-size: 60px;
+    background-color:#E95B8A;
+    border:none;
+    box-shadow:4px 4px #00565A ;
+    /*color:rgb(226, 226, 226);*/
+    color:black;
+    margin: 20px 0px 10px 20px;
+}
+.friend-btn:active{
+    background-color:#A72953;
+}
+#friends-list{
+    height:1083px;
+}
+.add-friend-ctnr{
+    text-align:right;
+    padding-right:30px;
+}
+.add-friend-btn{
+    font-size: 60px;
+    background-color:#E53771;
+    border:none;
+    box-shadow:4px 4px #00565A ;
+    /*color:rgb(226, 226, 226);*/
+    color:black;
+    margin: 10px 0px 10px 40px;
+    padding: 10px 10px 10px 10px;
+}
+.add-friend-btn:active{
+    background-color:#A72953;
+}
+.friends-well{
+    margin:10px 20px 0px 20px;
+    background-color: #80BABD!important;
+}
 /*Settings Page*/
 .settings-body{
     background-color:#009da5!important;
@@ -289,7 +346,7 @@ body{
     height: 315px;
     display: flex;
     background-color:#A8CFD1;
-    height: 935px;
+    height: 936px;
 }
 .material-icons.settings-icon{
     font-size: 300px;
@@ -314,6 +371,7 @@ body{
 }
 
 /*      Stats Page      */
+
 .footer {
     position: fixed;
     left: 0;
