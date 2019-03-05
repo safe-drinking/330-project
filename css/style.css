@@ -154,7 +154,7 @@ body{
 .clear-events-btn{
     background-color: #E53771;
     margin-left: 480px;
-    padding: 15px;
+    padding: 10px 10px 10px 10px;
     border:none;
     box-shadow:4px 4px #00565A ;
     color:black;
@@ -338,6 +338,10 @@ body{
 .friends-well{
     margin:10px 40px 0px 40px;
     background-color: #80BABD!important;
+    overflow-y:scroll;
+}
+.add-modal-body{
+    padding:100px 20px 100px 20px!important;
 }
 /*Settings Page*/
 .settings-body{
