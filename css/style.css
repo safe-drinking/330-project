@@ -328,9 +328,21 @@ body{
 }
 
 .my-hr{
-    width: 90%;
+    width: 92%;
     height: 5px;
     background-color: #337AB7;
     border-color: #337AB7;
     
+}
+
+.alert-header {
+    text-align: left;
+    font-size: 55px;
+    margin-left: 40px;
+}
+
+.my-alert {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 40px;
 }

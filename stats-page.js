@@ -104,7 +104,8 @@ function getSum(total, num) {
 }
 
 function updateAvg(){
-    avg = cum/(data_values[view_type].length);
+    var end = data_types[view_type].length - 1;
+    avg = cum/(data_types[view_type][end]);
     avg = parseInt(avg*100)/100;
 }
 
@@ -114,6 +115,5 @@ function init(){
     document.getElementById('panel1').innerHTML = avg;
     document.getElementById('panel2').innerHTML = cum;
 }
-
 
 init();
