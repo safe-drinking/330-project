@@ -11,6 +11,10 @@ function init() {
     events = localStorage.getItem("events");
     eventName = localStorage.getItem("thisEvent");
     friends = Number(localStorage.getItem("friends"));
+    currentClickedBuddy = (localStorage.getItem("event_" + eventName + "_buddy") ?
+        localStorage.getItem("event_" + eventName + "_buddy") :
+        "no one");
+    document.getElementById("shared-friend-name").innerHTML = currentClickedBuddy;
     var i;
     for (i = 0; i < friends; i++) {
         friendsList[i] = localStorage.getItem("friend_" + i);
@@ -54,7 +58,8 @@ function shareBuddy() {
     }
 
     closeFriendsModal();
-    localStorage.setItem("event_"+eventName+"_buddy", currentClickedBuddy);
+    localStorage.setItem("event_" + eventName + "_buddy", currentClickedBuddy);
+    document.getElementById("shared-friend-name").innerHTML = currentClickedBuddy;
 }
 function listFriends() {
     if (friends == 0) {
