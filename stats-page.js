@@ -17,8 +17,6 @@ var data_types = [year, month, week];
 var data_labels = ['year', 'month', 'week'];
 var x_labels = ['month', 'day', 'day'];
 
-var data_values = [year, month, week];
-var data_types = ['year', 'month', 'week'];
 var view_type = 2; // 0=>year, 1=>month, 2=>week
 var cum;
 var avg;
@@ -65,20 +63,20 @@ var myChart = new Chart(ctx, {
 });
 
 var pills = ['pill1', 'pill2', 'pill3'];
-var panels = ['panel1', 'panel2'];
 function pillClick(num){
     // update the active pill
     pills.forEach(function(x){
         document.getElementById(x).className = "inactive";
     });
     document.getElementById(pills[num]).className = "active";
-    
 
+    // update chart
     removeData(myChart);
     addData(myChart, data_labels[num], data_values[num], data_types[num], x_labels[num]);
     view_type = document.getElementById(pills[num]).value;
-    updateCum();
-    updateAvg();
+
+    // update cum and avg
+    init();
 }
 
 function addData(chart, label, data_y, data_x, x_label) {
@@ -98,7 +96,7 @@ function removeData(chart) {
 }
 
 function updateCum(){
-    cum = data_values[view_type].reduce(getSum, 0);
+    cum = data_values[view_type].reduce(getSum, 0);;
 } 
 
 function getSum(total, num) {
@@ -107,11 +105,14 @@ function getSum(total, num) {
 
 function updateAvg(){
     avg = cum/(data_values[view_type].length);
+    avg = parseInt(avg*100)/100;
 }
 
 function init(){
     updateCum();
     updateAvg();
+    document.getElementById('panel1').innerHTML = avg;
+    document.getElementById('panel2').innerHTML = cum;
 }
 
 
