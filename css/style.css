@@ -370,8 +370,12 @@ body{
     font-size: 300px;
 }
 #friend-name{
-    font-size: 100px;
-    margin: 80px 0px 0px 60px;
+    font-size: 70px;
+    width:500px;
+    height:200px;
+    margin: 80px 0px 0px 40px;
+    overflow-wrap: break-word;
+    overflow-y:scroll;
 }
 .friend-back-button{
     width: 900px;
