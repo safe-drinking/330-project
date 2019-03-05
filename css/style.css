@@ -136,7 +136,7 @@ body{
 }
 .dashboard-well{
     font-size: 40px;
-    height: 750px;
+    height: 758px;
     overflow-y: scroll;
     background-color: #80BABD!important;
 }
@@ -254,7 +254,7 @@ body{
 }
 .event-action-btn-group{
     margin-top: 100px;
-    margin-bottom: 95px;
+    margin-bottom: 85px;
     text-align:center;
 }
 .event-action-btn-group button i{
@@ -271,7 +271,6 @@ body{
     color:black;
 }
 .add-buddy-button:active{
-    box-shadow: 0px 0px;
     background-color: #A72953;
 }
 .add-buddy-modal-body p{
