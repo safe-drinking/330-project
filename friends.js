@@ -21,7 +21,6 @@ function addBuddy() {
 
 function addBuddyName() {
     closeAddModal();
-    console.log(document.getElementById('buddy-name').value);
     localStorage.setItem("friend_" + friends,
         document.getElementById('buddy-name').value);
     friendsList[friends] = document.getElementById('buddy-name').value;
