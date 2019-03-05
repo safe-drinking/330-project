@@ -2,35 +2,52 @@ function goTo(location){
     document.location.href = location;
 }
 
-var years = [0,1,2,3,4,5,6,7,8,9];
-// For drawing the lines
-var year = [4,5,8,7,6,7,4,4,3, localStorage.getItem("drinks")];
-var month = [6,8,7,5,7,4,5,6,4, localStorage.getItem("drinks")];
-var week = [3,4,5,8,9,9,5,4,2, localStorage.getItem("drinks")];
-var data_values = [year, month, week];
-var data_types = ['year', 'month', 'week'];
+// x values
+var week = [1,2,3,4,5,6,7];
+var month = [1,4,7,10,13,16,19,22,25,28,31];
+var year = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+// y values
+var week_data = [3,0,0,0,0,2, 2]; //localStorage.getItem("drinks")];
+var month_data = [10,2,1,11,0,1,7,3,0,1,8];
+var year_data = [34,35,23,39,21,20,22,22,18,19,25,24];
+
+var data_values = [year_data, month_data, week_data];
+var data_types = [year, month, week];
+var data_labels = ['year', 'month', 'week'];
+var x_labels = ['month', 'day', 'day'];
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: years,
+    labels: week,
     datasets: [
       { 
-        data: year,
-        label: "Year",
+        data: week_data,
+        label: "Week",
         borderColor: "#3e95cd",
       }
     ]
   },
   options: {
     scales: {
-       xAxes: [{
+       xAxes: [{ 
+           scaleLabel: {
+            display: true,
+            labelString: 'week',
+            fontSize: 35,
+            },
                ticks: {
                 fontSize: 30
                }
               }],
         yAxes: [{
+            scaleLabel: {
+            display: true,
+            labelString: 'drinks',
+            fontSize: 35,
+          },
             ticks: {
              fontSize: 30
             }
@@ -38,30 +55,28 @@ var myChart = new Chart(ctx, {
             }, legend: {
                 display: false,
                 }
-    
     }
-
 });
 
 var pills = ['pill1', 'pill2', 'pill3'];
-var alerts = ['alert1', 'alert2', 'alert3'];
+var panels = ['panel1', 'panel2'];
 function pillClick(num){
+    // update the active pill
     pills.forEach(function(x){
         document.getElementById(x).className = "inactive";
     });
     document.getElementById(pills[num]).className = "active";
-
-    alerts.forEach(function(x){
-        document.getElementById(x).innerHTML = data_types[num];
-    });
-
+    
+    // update the chart data
     removeData(myChart);
-    addData(myChart, data_types[num], data_values[num]);
+    addData(myChart, data_labels[num], data_values[num], data_types[num], x_labels[num]);
 }
 
-function addData(chart, label, data_p) {
+function addData(chart, label, data_y, data_x, x_label) {
+    chart.data.labels = data_x;
+    chart.options.scales.xAxes[0].scaleLabel.labelString = x_label;
     chart.data.datasets.push({
-        data: data_p,
+        data: data_y,
         label: label,
         borderColor: "#3e95cd",
     });

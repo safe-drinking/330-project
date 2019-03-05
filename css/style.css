@@ -306,3 +306,30 @@ body{
     font-size: 40px;
     margin: 40px;
 }
+
+.stats-grid {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.panel {
+    font-size: 40px;
+    margin: 20px;
+}
+
+.panel-heading{
+    text-align: center;
+}
+
+.panel-body {
+    text-align: center;
+}
+
+.my-hr{
+    width: 80%;
+    height: 3px;
+    background-color: #337AB7;
+    
+}
