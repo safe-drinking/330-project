@@ -50,7 +50,7 @@ function listFriends() {
     }
 }
 
-
+//onclick=goTo('friends-" + friendsList[i] + ".html')
 
 
 init();
