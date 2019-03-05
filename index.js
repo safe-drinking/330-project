@@ -1,6 +1,6 @@
 var events = 0;
-var friends = 4;
-var friendsList = ["The Hound", "Meryn Trant", "Cersei Lannister", "Joffrey"];
+var friends = 5;
+var friendsList = ["The Hound", "Meryn Trant", "Cersei Lannister", "Joffrey", "Walder Frey"];
 
 function init(){
     localStorage.clear();
