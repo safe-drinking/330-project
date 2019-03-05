@@ -51,7 +51,6 @@ function shareBuddy() {
     var i;
     for (i = 0; i < friends; i++) {
         var orange = document.getElementById("add_buddy_friend_" + i).value;
-        console.log(orange);
     }
 
     closeFriendsModal();
