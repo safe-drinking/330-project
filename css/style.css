@@ -253,8 +253,8 @@ body{
     border-color: gray;
 }
 .event-action-btn-group{
-    margin-top: 100px;
-    margin-bottom: 83px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     text-align:center;
 }
 .event-action-btn-group button i{
@@ -276,9 +276,6 @@ body{
 .add-buddy-modal-body p{
     font-size:50px;
 }
-.add-buddy-modal-content{
-
-}
 #add-buddy-friends-list{
     height: 500px;
     overflow-y: scroll;
@@ -295,7 +292,6 @@ body{
 .exit-event-button:active{
     background-color: #A72953;
 }
-
 .drink-img{
     height: 75%;
     width: 75%;
@@ -304,6 +300,13 @@ body{
     height: 60%;
     width: 60%;
     margin: 35px;
+}
+.shared-friend-ctnr{
+    background-color:white;
+    margin: 0px 40px 0px 40px!important;
+}
+.shared-friend-ctnr p{
+    font-size: 50px;
 }
 /* Friends Page */
 .friends-body{

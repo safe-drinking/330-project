@@ -68,11 +68,9 @@ function listFriends() {
             document.getElementById("add-buddy-friends-list").innerHTML +=
                 "<div class='radio'><label class='modal-opt'><input value='" + buddyName + "' onclick='handleRadioClick(this.value)' id='add_buddy_friend_" + i + "' type='radio' name='optradio'>" + buddyName + "</label></div>";
         }
-
     }
 }
 function handleRadioClick(buddyName) {
-    console.log(buddyName);
     currentClickedBuddy = buddyName;
 }
 function closeFriendsModal() {

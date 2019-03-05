@@ -45,7 +45,7 @@ function listFriends() {
         var i;
         for (i = 0; i < friends; i++) {
             document.getElementById("friends-list-content").innerHTML +=
-                "<button onclick=openFriendProfile(this.id) class='friend-btn' id= friend_'" + i + "'>" + String(friendsList[i]) + "</button></br>";
+                "<button onclick=openFriendProfile(this.id) class='friend-btn' id= friend_" + i + ">" + String(friendsList[i]) + "</button></br>";
         }
 
     }
