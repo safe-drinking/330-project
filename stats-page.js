@@ -42,7 +42,9 @@ var myChart = new Chart(ctx, {
         label: "day of the week",
         borderColor: "#3e95cd",
         pointHoverRadius: 20,
-        pointHitRadius: 100,
+        pointHitRadius: 40,
+        pointRadius: 15,
+        pointBorderColor: "blue"
       }
     ]
   },
