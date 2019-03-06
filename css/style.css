@@ -518,20 +518,24 @@ body{
 }
 
 /* Stats Page */
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    margin-bottom: 25px;
-    width: 100%;
-    text-align: center;
+.stats-page-body{
+    background-color:var(--body-color);
+    
+}
+.stats-background{
+    background-color:white;
+    padding:20px 20px 20px 20px;
+    height:1300px!important;
+}
+.bottom-bar{
+    margin:51px 0px 0px 0px;
 }
 .my-pill {
     font-size: 50px;
     display: flex;
     justify-content: flex-end;
-    margin-right: 65px;
+    /*margin-right: 65px;*/
+    border-bottom: 2px solid var(--body-color);
 }
 .my-chart {
     padding: 40px;
