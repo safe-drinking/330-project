@@ -19,7 +19,7 @@ var currentClickedBuddy;
 
 
 function init() {
-    if(localStorage.getItem("gender")== 'undefined' || localStorage.getItem("weight") == "") {
+    if(localStorage.getItem("gender")== 'undefined' || localStorage.getItem("weight") == "" || localStorage.getItem("weight") == null localStorage.getItem("gender") == null) {
         user_state = 0;
     } else{
         gender = localStorage.getItem("gender");
