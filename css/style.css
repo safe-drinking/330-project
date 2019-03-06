@@ -211,9 +211,12 @@ body{
 .menu-btn .icon{
     font-size: 140px;
 }
+
 .btn-group{
     font-size: 0px;
+    margin: 11.5% 0px 0px 0px;
 }
+
 .btn-group button{
     padding:20px 30px 20px 30px;
     background-color: var(--menu-buttons-color);
@@ -224,8 +227,9 @@ body{
 .btn-group button:active{
     background-color: var(--menu-buttons-pressed-color);
 }
-.btn-group{
-    margin: 11.5% 0px 0px 0px;
+ 
+.selected-btn{
+    background-color:var(--well-color)!important;
 }
 
 /*Event page*/
