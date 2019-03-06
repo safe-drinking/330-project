@@ -17,16 +17,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-    <div>
-        <div class="settings-message">
-            This Page is under construction.
-        </div>
-        <div>
-            <button class="logout-button" onclick="logout()">Log Out</button>
-            </br>
+<body class="settings-body">
+    <div class="container jumbo-ctnr">
+        <div class="jumbotron">
+            Settings
         </div>
     </div>
+
+    <div class="settings-header-info">
+        <i class="material-icons settings-icon">
+            account_circle
+        </i>
+        <p class="settings-name">
+            John Doe
+        </p>
+    </div>
+
+    <!--
+        <div class="settings-main-info">
+
+        </div>
+    -->
+    
+
+    <button class="logout-button" onclick="logout()">Log Out</button>
 
     <div class="btn-group">
         <button onclick="goTo('dashboard.html')" type="button" class="menu-btn">
@@ -39,7 +53,7 @@
                 show_chart
             </i>
         </button>
-        <button onclick="goTo('friends.html')"type="button" class="menu-btn">
+        <button onclick="goTo('friends.html')" type="button" class="menu-btn">
             <i class="material-icons icon">
                 people
             </i>
