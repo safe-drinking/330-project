@@ -7,6 +7,8 @@
     <!--link href="css/stats.css" rel="stylesheet"-->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Dosis|Montserrat|Nunito|Quicksand|Source+Sans+Pro"
         rel="stylesheet">
@@ -47,10 +49,46 @@
     <hr class="my-hr">
     <br>
 
-    <h1 class="alert-header">Alerts</h1>
-    <div class="alert alert-warning my-alert" role="alert">
+    <h1 class="alert-header">Trends</h1>
+    <div class="alert alert-warning my-alert" role="alert" data-toggle="modal" data-target="#exampleModal">
         <strong>Warning!</strong> Watch out, you had more than average this week.
       </div>
+
+    <!-- Alert Modal -->
+    <div class="modal fade alert-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog alert-modal-dialog" role="document">
+        <div class="modal-content alert-modal">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Resources</h5>
+            </div>
+            <div class="modal-body">
+            <a href="https://www.stopdrinkingexpert.com/motivation-to-quit-drinking/">Here is a resource to help motivate you.</a>
+            <br> We're rooting for you! 
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Drink Modal -->
+    <div class="modal fade alert-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog alert-modal-dialog" role="document">
+            <div class="modal-content alert-modal">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Resources</h5>
+                </div>
+                <div class="modal-body">
+                <a href="https://www.stopdrinkingexpert.com/motivation-to-quit-drinking/">Here is a resource to help motivate you.</a>
+                <br> We're rooting for you! 
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
     
     <div class="footer">
         <div class="bottom-bar btn-group">

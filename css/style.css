@@ -346,3 +346,19 @@ body{
     margin-right: 40px;
     font-size: 40px;
 }
+.alert-modal{
+    width: 100%;
+}
+.alert-modal .modal-title{
+    font-size:50px;
+}
+.alert-modal button{
+    font-size:45px;
+}
+.alert-modal .modal-body{
+    font-size:45px;
+}
+.alert-modal-dialog{
+    width:90%!important;
+    margin-top:40%!important; 
+}

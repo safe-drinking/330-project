@@ -23,6 +23,7 @@ var avg;
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
+    showTooltips: false,
   type: 'line',
   data: {
     labels: week,
@@ -31,6 +32,8 @@ var myChart = new Chart(ctx, {
         data: week_data,
         label: "Week",
         borderColor: "#3e95cd",
+        pointHoverRadius: 20,
+        pointHitRadius: 100,
       }
     ]
   },
@@ -56,11 +59,22 @@ var myChart = new Chart(ctx, {
              fontSize: 30
             }
            }]
-            }, legend: {
-                display: false,
+            }, 
+            legend: {
+                    display: false,
+                    },
+            onClick: pointClicked,
+            tooltips: {
+                enabled: false
+            }
                 }
-    }
+
 });
+
+function pointClicked(ctx, eventarr){
+    console.log("called with arr");
+    console.log(eventarr[0].index);
+}
 
 var pills = ['pill1', 'pill2', 'pill3'];
 function pillClick(num){
@@ -117,3 +131,4 @@ function init(){
 }
 
 init();
+$('#myModal').modal({ show: false})
