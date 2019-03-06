@@ -2,6 +2,8 @@ var friendsList = [];
 var friends;
 var name_id = localStorage.getItem("thisFriend");
 
+
+
 function init() {
     friends = Number(localStorage.getItem("friends"));
     var i;
@@ -20,10 +22,13 @@ function deleteFriend() {
     localStorage.removeItem(name_id);
     friends--;
     localStorage.setItem("friends",friends);
-    var i = parseInt(name_id);//name_id.substr(7,3);
+
+    var i = parseInt(name_id.substr(7,9));
     for (i; i < friends; i++) {
-        localStorage.setItem("friend_" + i, "friend_" + (i+1));
+        var temp = localStorage.getItem("friend_" + (i + 1));
+        localStorage.setItem("friend_" + i, temp);
     }
+    localStorage.removeItem("friend_" + i)
     goTo("friends.html");
 }
 
