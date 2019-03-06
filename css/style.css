@@ -538,7 +538,7 @@ body{
     border-bottom: 2px solid var(--body-color);
 }
 .my-chart {
-    padding: 40px;
+    padding: 40px 40px 10px 10px;
 }
 .my-alert {
     font-size: 40px;

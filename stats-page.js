@@ -22,7 +22,7 @@ var year_data = [34,35,23,39,21,20,22,22,18,19,25,24];
 var data_values = [year_data, month_data, week_data];
 var data_types = [year, month, week];
 var data_labels = ['year', 'month', 'week'];
-var x_labels = ['month', 'day of the month', 'day of the week'];
+var x_labels = ['month of the year', 'day of the month', 'day of the week'];
 
 var view_type = 2; // 0=>year, 1=>month, 2=>week
 var cum;
@@ -42,8 +42,9 @@ var myChart = new Chart(ctx, {
         borderColor: "#3e95cd",
         pointHoverRadius: 20,
         pointHitRadius: 40,
-        pointRadius: 15,
-        pointBorderColor: "blue"
+        pointRadius: 12,
+        pointBorderColor: "black",
+        pointBackgroundColor:"#375C7F"
       }
     ]
   },
