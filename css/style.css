@@ -453,12 +453,12 @@ body{
     font-size: 60px;
     text-align: center;
     margin: 51px;
-    background-color: lightpink;
+    background-color:#D10000;
     border: none;
     box-shadow: 2px 2px;
 }
 .delete-friend-button:active{
-    background-color: rgb(247, 71, 100);
+    background-color: #AD1818;
 }
 .friend-back-button{
     width: 900px;
