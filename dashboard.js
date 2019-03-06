@@ -15,11 +15,14 @@ function openEvent(id){
     document.location.href= "event-page.html"
 }
 function clearEvents() {
+    var i;
+    for (i = 0; i < events; i++) {
+        localStorage.removeItem("event_" + i);
+        localStorage.removeItem("bac_" + i);
+    }
     events = 0;
     localStorage.setItem("events", events);
     listEvents();
-
-    
 }
 function listEvents() {
     if (events == 0) {
