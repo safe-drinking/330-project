@@ -18,6 +18,8 @@ function clearEvents() {
     events = 0;
     localStorage.setItem("events", events);
     listEvents();
+
+    
 }
 function listEvents() {
     if (events == 0) {
