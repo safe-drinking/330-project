@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body class="event-page-body">
     <div class="container jumbo-ctnr">
         <div class="jumbotron" id="jumbo-id">
             <button type="button" class="event-title-btn" id="event-title" data-toggle="modal"
@@ -53,7 +53,7 @@
         <div class="modal-dialog event-modal-dialog">
 
             <!-- Modal Content-->
-            <div class="modal-content event-modal-content">
+            <div class="modal-content ">
                 <div class="modal-header">
                     <button type="button" onclick="closeWarning()" class="close" data-dismiss="modal">&times;</button>
                     <p class="modal-title">Warning!</p>
@@ -65,6 +65,29 @@
                 <div class="modal-footer">
                     <button type="submit" onclick="closeWarning()" class="btn btn-default submit-btn"
                         data-dismiss="modal">Dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="friendsModal" class="modal event-modal" role="dialog">
+        <div class="modal-dialog event-modal-dialog">
+
+            <!-- Modal Content-->
+            <div class="modal-content add-buddy-modal-content">
+                <div class="modal-header">
+                    <button onclick="closeFriendsModal()" type="button" class="close"
+                        data-dismiss="modal">&times;</button>
+                    <p class="modal-title">Choose a buddy.</p>
+                </div>
+                <div class="add-buddy-modal-body">
+                    <p>Share this event with one of your buddies, and practice safe drinking together!</p>
+                    <div id="add-buddy-friends-list" class="form-group">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="shareBuddy()" type="submit" class="btn btn-default submit-btn"
+                        data-dismiss="modal">Share</button>
                 </div>
             </div>
         </div>
@@ -102,9 +125,9 @@
     </div>
 
     <div class="event-action-btn-group">
-        <button onclick="addBuddy()"class="add-buddy-button">
+        <button onclick="addBuddy()" class="add-buddy-button">
             <i class="material-icons">
-                add
+                share
             </i>
             Buddy
         </button>
@@ -114,6 +137,11 @@
             </i>
             Done
         </button>
+    </div>
+
+    <div class="shared-friend-ctnr container">
+        <p>This event is shared with</p>
+        <p id="shared-friend-name"></p>
     </div>
 
     <div class="btn-group">
@@ -127,7 +155,7 @@
                 show_chart
             </i>
         </button>
-        <button type="button" class="menu-btn">
+        <button onclick="goTo('friends.html')" type="button" class="menu-btn">
             <i class="material-icons icon">
                 people
             </i>

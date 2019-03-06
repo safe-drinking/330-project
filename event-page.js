@@ -13,6 +13,10 @@ var gender;
 var weight;
 
 var user_state;
+var friendsList = [];
+var friends;
+var currentClickedBuddy;
+
 
 function init() {
     if(localStorage.getItem("gender")== 'undefined' || localStorage.getItem("weight") == "") {
@@ -25,6 +29,15 @@ function init() {
     
     events = localStorage.getItem("events");
     eventName = localStorage.getItem("thisEvent");
+    friends = Number(localStorage.getItem("friends"));
+    currentClickedBuddy = (localStorage.getItem("event_" + eventName + "_buddy") ?
+        localStorage.getItem("event_" + eventName + "_buddy") :
+        "no one");
+    document.getElementById("shared-friend-name").innerHTML = currentClickedBuddy;
+    var i;
+    for (i = 0; i < friends; i++) {
+        friendsList[i] = localStorage.getItem("friend_" + i);
+    }
     localStorage.setItem("notify", "0");
     //REFRESHING the page will cause all the data to be lost if DONE is not pressed
     if (eventName !== "null") {
@@ -62,7 +75,34 @@ function addEvent() {
     localStorage.setItem("events", events);
 
 }
-function addBuddy(){
+function addBuddy() {
+    document.getElementById("friendsModal").style = 'display: inline';
+    listFriends();
+}
+function shareBuddy() {
+    closeFriendsModal();
+    localStorage.setItem("event_" + eventName + "_buddy", currentClickedBuddy);
+    document.getElementById("shared-friend-name").innerHTML = currentClickedBuddy;
+}
+function listFriends() {
+    if (friends == 0) {
+        document.getElementById("add-buddy-friends-list").innerHTML = "You have no Buddies";
+    }
+    else {
+        var i;
+        for (i = 0; i < friends; i++) {
+            var buddyName = String(friendsList[i]);
+            document.getElementById("add-buddy-friends-list").innerHTML +=
+                "<div class='radio'><label class='add-buddy-modal-opt'><input value='" + buddyName + "' onclick='handleRadioClick(this.value)' id='add_buddy_friend_" + i + "' type='radio' name='optradio'>" + buddyName + "</label></div>";
+        }
+    }
+}
+function handleRadioClick(buddyName) {
+    currentClickedBuddy = buddyName;
+}
+function closeFriendsModal() {
+    document.getElementById("friendsModal").style = 'display: none';
+    document.getElementById("add-buddy-friends-list").innerHTML = "";
 }
 
 function changeName() {
@@ -95,7 +135,7 @@ function openWarning() {
 
 }
 
-function closeWarning(){
+function closeWarning() {
     document.getElementById("warningModal").style = 'display: none';
 }
 
@@ -110,8 +150,11 @@ function setBAC() {
         openWarning();
     }
 }
-function goSettings(){
+function goSettings() {
     document.location.href = "settings.html";
+}
+function goTo(location) {
+    document.location.href = location;
 }
 
 function updateBAC(){

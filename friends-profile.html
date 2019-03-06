@@ -14,30 +14,34 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body class="dashboard-body">
+<body class="friends-profile-body">
 
     <div class="container jumbo-ctnr">
         <div class="jumbotron">
-            Dashboard
+            My Buddies
         </div>
     </div>
-    <div class="container new-event-ctnr">
-        <button type="button" onclick="openNewEvent()" class="new-event-btn">
-            + New Event
-        </button>
+
+    <div class="friends-header-info">
+        <i class="material-icons friends-icon">
+            account_circle
+        </i>
+        <p id="friend-name"></p>
+        <div class="friend-info"></div>
+        <button onclick="deleteFriend()" class="delete-friend-button" type="button">Delete Friend</button>
     </div>
-    <div class="container events-ctnr">
-        <p>Events
-            <!--This button is just gonna be here for development-->
-            <button onclick="clearEvents()" class="clear-events-btn">Clear</button>
-        </p>
-        <div class="well dashboard-well" id="events-list">
-            <p id = "events-list-content"></p>
+
+    <!--
+        <div class="settings-main-info">
+
         </div>
-    </div>
+    -->
     
+
+    <button class="friend-back-button" onclick="goTo('friends.html')">Back</button>
+
     <div class="btn-group">
-        <button type="button" class="menu-btn">
+        <button onclick="goTo('dashboard.html')" type="button" class="menu-btn">
             <i class="material-icons icon">
                 home
             </i>
@@ -47,18 +51,19 @@
                 show_chart
             </i>
         </button>
-        <button onclick="goFriends()" type="button" class="menu-btn">
+        <button onclick="goTo('friends.html')" type="button" class="menu-btn">
             <i class="material-icons icon">
                 people
             </i>
         </button>
-        <button onclick="goSettings()" type="button" class="menu-btn">
+        <button onclick="goTo('settings.html')" type="button" class="menu-btn">
             <i class="material-icons icon">
                 settings
             </i>
         </button>
     </div>
-    <script src="dashboard.js"></script>
+
+    <script src="friends-profile.js"></script>
 </body>
 
 </html>
