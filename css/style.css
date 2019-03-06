@@ -1,4 +1,5 @@
 :root{
+    /*
     --body-color:#009da5;
     --shadow-color:#00565A;
     --well-color:#80BABD;
@@ -8,10 +9,26 @@
     --secondary-button-color:pink;
     --font-color:black;
     --menu-buttons-color:#A0CBCD;
+    */
+    /*--body-color:#234C73;*/
+    --body-color:#375C7F;
+    --shadow-color:#0A2D4D;
+    /*--well-color:#4F708F;*/
+    --well-color:#5F7C99;
+    --highlight-well-color:#6F89A3;
+    --primary-button-color:#AD5693;
+    --primary-button-pressed-color:#8C1C6A;
+    --secondary-button-color:#BECC92;
+    --secondary-button-pressed-color:#A6BA6A;
+    --font-color:black;
+    --menu-buttons-color:#A7B7C7;
+    --menu-buttons-pressed-color:#6F89A3;
+    
 }
 /* JACOB, make the Beer, wine, liquor buttons this color: #FFBC3F, it might look back but try different shades of yellow*/
 body{
     font-family: 'Nunito', sans-serif !important;
+    color:var(--font-color)!important;
     /*font-family: 'Quicksand', sans-serif !important;
     font-family: 'Dosis', sans-serif !important;*/
 }
@@ -124,6 +141,7 @@ body{
     padding-top: 30px !important;
     padding-bottom: 30px !important;
     background-color: var(--well-color)!important;
+    color:var(--font-color)!important;
 }
 .jumbo-ctnr{
     width:90%!important;
@@ -159,6 +177,7 @@ body{
     font-size: 40px;
     height: 758px;
     overflow-y: scroll;
+    border:none!important;
     background-color: var(--well-color)!important;
 }
 #events-list-content button{
@@ -170,7 +189,7 @@ body{
     color:var(--font-color);
 }
 #events-list-content button:active{
-    background-color: var(--primary-button-pressed-color);
+    background-color: var(--secondary-button-pressed-color);
 }
 .clear-events-btn{
     background-color: var(--primary-button-color);
@@ -193,7 +212,7 @@ body{
     box-shadow: 4px 4px var(--shadow-color);
 }
 .btn-group button:active{
-    background-color: lightgray;
+    background-color: var(--menu-buttons-pressed-color);
 }
 .btn-group{
     margin:7% 8% 1% 9%;
@@ -222,7 +241,7 @@ body{
     color:var(--font-color);
 }
 .event-title-btn:active{
-    background-color: var(--primary-button-pressed-color);
+    background-color: var(--secondary-button-pressed-color);
 }
 .event-modal-content{
     height:700px!important;
@@ -361,7 +380,7 @@ body{
     padding: 10px;
 }
 .friend-btn:active{
-    background-color:var(--primary-button-pressed-color);
+    background-color:var(--secondary-button-pressed-color);
 }
 #friends-list{
     height:1083px;
