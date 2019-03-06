@@ -127,7 +127,7 @@ body{
 .quiz-modal-footer .back-submit-btn{
     margin-right:52%;
 }
-#incomplete-msg, #incomplete-msg2{
+#incomplete-msg, #incorrect-msg{
     font-size:50px;
     color:var(--warning-red);
 }

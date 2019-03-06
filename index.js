@@ -14,36 +14,33 @@ function init() {
 
     }
     document.getElementById("incomplete-msg").style = 'display: none';
-    document.getElementById("incomplete-msg2").style = 'display: none';
+    document.getElementById("incorrect-msg").style = 'display: none';
+
 
 }
 
 function login() {
-    if (document.getElementById("login-name").value == "" || document.getElementById("login-email").value == "") {
+    if (document.getElementById("login-email").value == "" ||
+        document.getElementById("login-pw").value == "") {
         document.getElementById("incomplete-msg").style = 'display: inline';
+        document.getElementById("incorrect-msg").style = 'display: none';
+
+    }
+    else if (document.getElementById("login-email").value == "johndoe@test.com" &&
+        document.getElementById("login-pw").value == "EECS330") {
+        document.location.href = "dashboard.html";
     }
     else {
-        document.location.href = "dashboard.html";
+        document.getElementById("incorrect-msg").style = 'display: inline';
+        document.getElementById("incomplete-msg").style = 'display: none';
+
     }
 }
 
 function register() {
     document.location.href = "dashboard.html";
 }
-function checkRegister(){
-    if (document.getElementById("register-name").value == "" || 
-        document.getElementById("register-email").value == "" ||
-        document.getElementById("register-pw").value == "" ||
-        document.getElementById("register-pw2").value == ""
-        ) {
-        document.getElementById("incomplete-msg2").style = 'display: inline';
-    }
-    else{
-        document.getElementById("registerModal").style = 'display: none';
-        document.getElementById("sexModal").style = 'display: inline';
 
-    }
-}
 function setSex() {
     var buttons = document.getElementsByName('optradio');
     for (var i = 0; i < buttons.length; i++) {
