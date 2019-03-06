@@ -411,6 +411,7 @@ body{
 .friends-well{
     margin:10px 40px 0px 40px;
     background-color: var(--well-color)!important;
+    border:none!important;
     overflow-y:scroll;
 }
 .add-modal-body{
