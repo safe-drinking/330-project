@@ -587,6 +587,10 @@ body{
     margin-left: 40px;
     margin-right: 40px;
     font-size: 40px;
+    box-shadow: 4px 4px lightgray;
+}
+.my-alert:active {
+    background-color: rgb(233, 217, 177);
 }
 .alert-modal{
     width: 100%;
