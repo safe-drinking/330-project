@@ -2,14 +2,22 @@ function goTo(location){
     document.location.href = location;
 }
 
+// member
+var drinks = 0;
+var stored_drinks = localStorage.getItem("drinks");
+if (stored_drinks != null && stored_drinks != "NaN" ){
+    drinks = localStorage.getItem("drinks");
+    console.log(stored_drinks);
+}
+
 // x values
 var week = [1,2,3,4,5,6,7];
 var month = [1,4,7,10,13,16,19,22,25,28,31];
 var year = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 // y values
-var week_data = [3,0,0,0,0,2, 2]; //localStorage.getItem("drinks")];
-var month_data = [10,2,1,11,0,1,7,3,0,1,8];
+var week_data = [3,0,0,0,0,6, drinks]; //localStorage.getItem("drinks")];
+var month_data = [9,1,1,8,0,1,6,2,0,1,8];
 var year_data = [34,35,23,39,21,20,22,22,18,19,25,24];
 
 var data_values = [year_data, month_data, week_data];
@@ -20,6 +28,7 @@ var x_labels = ['month', 'day', 'day'];
 var view_type = 2; // 0=>year, 1=>month, 2=>week
 var cum;
 var avg;
+
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
@@ -79,12 +88,13 @@ function pointClicked(ctx, eventarr){
     $('#drinkModal').modal('show'); 
 }
 
+var months = ["April '18", "May '18", "June '18", "July '18", "August '18", "September '18", "October '18", "November '18", "December '18", "January '19", "February '19", "March '19"];
 function getDate(index){
     var days_ago = 0;
     var len = data_values[view_type].length - 1;
     var prefix = "";
     if (view_type == 0){
-        days_ago = 12 * (len - index);
+        days_ago = 31 * (len - index);
         prefix = "in the month of";
     } else if (view_type == 1){
         days_ago = 3 * (len - index);
@@ -95,8 +105,13 @@ function getDate(index){
     }
     var d = new Date();
     d.setDate(d.getDate() - days_ago);
+    str = d.toLocaleString().split(",")[0];
 
-    return prefix + " " + d.toLocaleString().split(",")[0];
+    if (view_type == 0){
+        str = months[index];
+    }
+
+    return prefix + " " + str;
 }
 
 var pills = ['pill1', 'pill2', 'pill3'];
