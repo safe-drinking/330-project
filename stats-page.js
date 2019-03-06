@@ -23,7 +23,7 @@ var data_values = [year_data, month_data, week_data];
 var data_types = [year, month, week];
 var data_labels = ['year', 'month', 'week'];
 var x_labels = ['month of the year', 'day of the month', 'day of the week'];
-var titles = ['This Past Year', 'This Past Month', 'This Past Year'];
+var titles = ['This Past Year', 'This Past Month', 'This Past Week'];
 
 var view_type = 2; // 0=>year, 1=>month, 2=>week
 var cum;
@@ -131,8 +131,8 @@ function pillClick(num) {
     document.getElementById(pills[num]).className = "active";
 
     // update chart
-    addData(myChart, data_labels[num], data_values[num], data_types[num], x_labels[num]);
     view_type = document.getElementById(pills[num]).value;
+    addData(myChart, data_labels[num], data_values[num], data_types[num], x_labels[num]);
 
     // update cum and avg
     init();
@@ -142,7 +142,7 @@ function addData(chart, label, data_y, data_x, x_label) {
     chart.data.labels = data_x;
     chart.options.scales.xAxes[0].scaleLabel.labelString = x_label;
     chart.options.title.text = titles[view_type];
-    console.log(chart.data.datasets)
+    console.log("viewtype is ", view_type);
     chart.data.datasets[0].data = data_y;
     chart.data.datasets[0].label = label;
     chart.update();
