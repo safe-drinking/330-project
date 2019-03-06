@@ -51,7 +51,7 @@ var myChart = new Chart(ctx, {
        xAxes: [{ 
            scaleLabel: {
             display: true,
-            labelString: 'week',
+            labelString: 'day of the week',
             fontSize: 35,
             },
                ticks: {
