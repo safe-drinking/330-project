@@ -142,7 +142,6 @@ function addData(chart, label, data_y, data_x, x_label) {
     chart.data.labels = data_x;
     chart.options.scales.xAxes[0].scaleLabel.labelString = x_label;
     chart.options.title.text = titles[view_type];
-    console.log("viewtype is ", view_type);
     chart.data.datasets[0].data = data_y;
     chart.data.datasets[0].label = label;
     chart.update();
