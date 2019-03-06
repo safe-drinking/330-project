@@ -136,15 +136,18 @@ body{
     text-align: center;
     font-size: 85px;
     font-weight: bold;
-    margin-top: 10px;
+    width: 980px;
+    /* margin-top: 10px; */
     padding-top: 30px !important;
     padding-bottom: 30px !important;
     background-color: var(--well-color)!important;
     color:var(--font-color)!important;
 }
 .jumbo-ctnr{
-    width:90%!important;
-}
+    width: 90%!important;
+    margin: 0px !important;
+    padding: 0px !important;
+} 
 .new-event-ctnr{
     padding: 11.5% 15.5% 11.5% 15.5%!important;
 }
@@ -167,7 +170,7 @@ body{
 
 .events-ctnr p{
     font-size: 60px;
-    color:var(--font-color);
+    color: var(--font-color);
 }
 .events-ctnr{
     width:90%!important;
@@ -204,17 +207,21 @@ body{
 .menu-btn .icon{
     font-size: 140px;
 }
+.btn-group{
+    font-size: 0px;
+}
 .btn-group button{
     padding:20px 30px 20px 30px;
     background-color: var(--menu-buttons-color);
     border:none;
-    box-shadow: 4px 4px var(--shadow-color);
+    box-shadow: 0px 0px var(--shadow-color);
+    width: 245px;
 }
 .btn-group button:active{
     background-color: var(--menu-buttons-pressed-color);
 }
 .btn-group{
-    margin:7% 8% 1% 9%;
+    margin: 11.5% 0px 0px 0px;
 }
 
 /*Event page*/
