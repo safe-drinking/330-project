@@ -8,6 +8,8 @@ function init() {
         friendsList[i] = localStorage.getItem("friend_" + i);
     }
     window.listFriends();
+    document.getElementById("incomplete-buddy-msg").style = 'display: none';
+
 }
 
 
@@ -16,20 +18,29 @@ function goTo(location) {
 }
 
 function addBuddy() {
+    document.getElementById("incomplete-buddy-msg").style = 'display: none';
+
     document.getElementById("addModal").style = 'display: inline';
 }
 
 function addBuddyName() {
-    closeAddModal();
-    localStorage.setItem("friend_" + friends,
-        document.getElementById('buddy-name').value);
-    friendsList[friends] = document.getElementById('buddy-name').value;
-    document.getElementById("friends-list-content").innerHTML +=
-        "<button onclick=openFriendProfile(this.id) class='friend-btn' id= friend_" + friends + ">" + String(friendsList[friends]) + "</button></br>";
-    friends++;
-    localStorage.setItem("friends", friends);
-    document.getElementById('buddy-name').value = "";
-    document.getElementById('buddy-email').value = "";
+    if (document.getElementById("buddy-name").value == "" ||
+        document.getElementById("buddy-email").value == "") {
+        document.getElementById("incomplete-buddy-msg").style = 'display: inline';
+
+    }
+    else {
+        closeAddModal();
+        localStorage.setItem("friend_" + friends,
+            document.getElementById('buddy-name').value);
+        friendsList[friends] = document.getElementById('buddy-name').value;
+        document.getElementById("friends-list-content").innerHTML +=
+            "<button onclick=openFriendProfile(this.id) class='friend-btn' id= friend_" + friends + ">" + String(friendsList[friends]) + "</button></br>";
+        friends++;
+        localStorage.setItem("friends", friends);
+        document.getElementById('buddy-name').value = "";
+        document.getElementById('buddy-email').value = "";
+    }
 }
 
 function closeAddModal() {
@@ -51,7 +62,7 @@ function listFriends() {
 }
 
 function openFriendProfile(clicked_id) {
-    localStorage.setItem("thisFriend",clicked_id);
+    localStorage.setItem("thisFriend", clicked_id);
     goTo("friends-profile.html");
 }
 
