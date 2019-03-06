@@ -425,6 +425,9 @@ body{
 .add-modal-body{
     padding:100px 20px 100px 20px!important;
 }
+.add-modal-body p{
+    font-size:60px;
+}
 
 /*Friend Page - Profile */
 .friends-profile-body{
