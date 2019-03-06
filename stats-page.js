@@ -7,7 +7,6 @@ var drinks = 0;
 var stored_drinks = localStorage.getItem("drinks");
 if (stored_drinks != null && stored_drinks != "NaN" ){
     drinks = parseInt(localStorage.getItem("drinks"));
-    console.log(stored_drinks);
 }
 
 // x values
