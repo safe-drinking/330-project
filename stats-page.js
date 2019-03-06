@@ -67,13 +67,36 @@ var myChart = new Chart(ctx, {
             tooltips: {
                 enabled: false
             }
-                }
+            }
 
 });
 
 function pointClicked(ctx, eventarr){
-    console.log("called with arr");
-    console.log(eventarr[0].index);
+    var index = eventarr[0]._index;
+    var date_string = getDate(index);
+    var drinks = data_values[view_type][index];
+    document.getElementById('modal-drink-text').innerHTML = "You had " + drinks + " drinks " + date_string;
+    $('#drinkModal').modal('show'); 
+}
+
+function getDate(index){
+    var days_ago = 0;
+    var len = data_values[view_type].length - 1;
+    var prefix = "";
+    if (view_type == 0){
+        days_ago = 12 * (len - index);
+        prefix = "in the month of";
+    } else if (view_type == 1){
+        days_ago = 3 * (len - index);
+        prefix = "on or around the day of";
+    } else {
+        days_ago = (len - index);
+        prefix = "on the day of";
+    }
+    var d = new Date();
+    d.setDate(d.getDate() - days_ago);
+
+    return prefix + " " + d.toLocaleString().split(",")[0];
 }
 
 var pills = ['pill1', 'pill2', 'pill3'];
@@ -85,7 +108,6 @@ function pillClick(num){
     document.getElementById(pills[num]).className = "active";
 
     // update chart
-    removeData(myChart);
     addData(myChart, data_labels[num], data_values[num], data_types[num], x_labels[num]);
     view_type = document.getElementById(pills[num]).value;
 
@@ -96,16 +118,9 @@ function pillClick(num){
 function addData(chart, label, data_y, data_x, x_label) {
     chart.data.labels = data_x;
     chart.options.scales.xAxes[0].scaleLabel.labelString = x_label;
-    chart.data.datasets.push({
-        data: data_y,
-        label: label,
-        borderColor: "#3e95cd",
-    });
-    chart.update();
-}
-
-function removeData(chart) {
-    chart.data.datasets.pop();
+    console.log(chart.data.datasets)
+    chart.data.datasets[0].data = data_y;
+    chart.data.datasets[0].label = label;
     chart.update();
 }
 
