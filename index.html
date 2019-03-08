@@ -30,16 +30,19 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <input type="name" placeholder="Name" class="form-control register-input" id="title">
-                        <input type="email" placeholder="Email" class="form-control register-input" id="title">
-                        <input type="password" placeholder="Password" class="form-control register-input" id="title">
+                        <input type="name" placeholder="Name" class="form-control register-input" id="register-name">
+                        <input type="email" placeholder="Email" class="form-control register-input" id="register-email">
+                        <input type="password" placeholder="Password" class="form-control register-input"
+                            id="register-pw">
                         <input type="password" placeholder="Confirm Password" class="form-control register-input"
-                            id="title">
+                            id="register-pw2">
                     </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-default submit-btn" data-dismiss="modal" data-toggle="modal"
-                        data-target="#sexModal">Submit</button>
+                         data-target="#sexModal">Submit</button>
+                    
                 </div>
             </div>
         </div>
@@ -123,9 +126,10 @@
                     </div>
                 </div>
                 <div class="modal-footer quiz-modal-footer">
-                    <button type="submit" class="btn btn-default back-submit-btn" data-dismiss="modal" data-toggle="modal"
-                        data-target="#heightModal">Back</button>
-                    <button type="submit" onclick="register(); setWeight();" class="btn btn-default submit-btn">Submit</button>
+                    <button type="submit" class="btn btn-default back-submit-btn" data-dismiss="modal"
+                        data-toggle="modal" data-target="#heightModal">Back</button>
+                    <button type="submit" onclick="register(); setWeight();"
+                        class="btn btn-default submit-btn">Submit</button>
                 </div>
             </div>
         </div>
@@ -143,9 +147,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <input type="email" placeholder="Email" class="form-control register-input" id="title">
-                        <input type="password" placeholder="Password" class="form-control register-input" id="title">
+                        <input type="email" placeholder="Email" class="form-control register-input" id="login-email">
+                        <input type="password" placeholder="Password" class="form-control register-input"
+                            id="login-pw">
                     </div>
+                    <p id="incomplete-msg">Please complete all the fields before pressing Submit.</p>
+                    <p id="incorrect-msg">Incorrect email or password.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-default submit-btn" onclick="login()">Submit</button>

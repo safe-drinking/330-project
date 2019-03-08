@@ -28,11 +28,13 @@
                     <p class="modal-title">Add a new buddy!</p>
                 </div>
                 <div class="modal-body add-modal-body">
+                    <p>Please enter your buddy's:</p>
                     <div class="form-group">
-                        <p>Please enter your buddy's:</p>
+
                         <input type="email" placeholder="name" class="form-control register-input" id="buddy-name">
                         <input type="email" placeholder="email" class="form-control register-input" id="buddy-email">
                     </div>
+                    <p id="incomplete-buddy-msg">Please complete all the fields before pressing Add.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" onclick="addBuddyName()" class="btn btn-default submit-btn"
@@ -64,7 +66,7 @@
                 show_chart
             </i>
         </button>
-        <button type="button" class="menu-btn">
+        <button type="button" class="menu-btn selected-btn">
             <i class="material-icons icon">
                 people
             </i>
