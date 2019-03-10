@@ -15,8 +15,8 @@ function init() {
     }
     document.getElementById("incomplete-msg").style = 'display: none';
     document.getElementById("incorrect-msg").style = 'display: none';
-
-
+    document.getElementById("incomplete-msg-reg").style = 'display: none';
+    document.getElementById("password-match-msg").style = 'display: none';
 }
 
 function login() {
@@ -33,7 +33,23 @@ function login() {
     else {
         document.getElementById("incorrect-msg").style = 'display: inline';
         document.getElementById("incomplete-msg").style = 'display: none';
+    }
+}
 
+function RegistrationStep1() {
+    if (document.getElementById("register-name").value == "" ||
+        document.getElementById("register-email").value == "" ||
+        document.getElementById("register-pw").value == "") {
+            document.getElementById("incomplete-msg-reg").style = 'display: inline';
+            document.getElementById("password-match-msg").style = 'display: none';
+    } 
+    else if(document.getElementById("register-pw").value != 
+            document.getElementById("register-pw2").value ){
+            document.getElementById("incomplete-msg-reg").style = 'display: none';
+            document.getElementById("password-match-msg").style = 'display: inline';
+    } else {
+        $('#registerModal').modal('hide');
+        $('#sexModal').modal('show');
     }
 }
 

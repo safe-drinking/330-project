@@ -131,6 +131,10 @@ body{
     font-size:50px;
     color:var(--warning-red);
 }
+.error-msg{
+    font-size:50px !important;
+    color:var(--warning-red);
+}
 
 /* Dashboard and the rest*/
 .dashboard-body{

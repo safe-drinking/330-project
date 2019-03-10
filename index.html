@@ -37,11 +37,12 @@
                         <input type="password" placeholder="Confirm Password" class="form-control register-input"
                             id="register-pw2">
                     </div>
+                    <p id="incomplete-msg-reg" class="error-msg">Please complete all the fields before pressing Submit.</p>
+                    <p id="password-match-msg" class="error-msg">Please ensure that your passwords match.</p>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-default submit-btn" data-dismiss="modal" data-toggle="modal"
-                         data-target="#sexModal">Submit</button>
+                    <button type="submit" class="btn btn-default submit-btn" onclick="RegistrationStep1()">Submit</button>
                     
                 </div>
             </div>
