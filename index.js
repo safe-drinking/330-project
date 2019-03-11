@@ -3,6 +3,8 @@ var gender;
 var weight;
 var friends = 5;
 var friendsList = ["The Hound", "Meryn Trant", "Cersei Lannister", "Joffrey", "Walder Frey"];
+var friendEventsList = ["Jen's Bday", "Wine n Cheese"]
+var friendEvents = 2;
 
 function init() {
     localStorage.clear();
@@ -12,6 +14,10 @@ function init() {
     for (i = 0; i < friends; i++) {
         localStorage.setItem("friend_" + i, friendsList[i]);
 
+    }
+    var j;
+    for (j = 0; j < friendEvents; j++) {
+        localStorage.setItem("friendEvent_" + j, friendEventsList[j]);
     }
     document.getElementById("incomplete-msg").style = 'display: none';
     document.getElementById("incorrect-msg").style = 'display: none';
@@ -40,13 +46,13 @@ function RegistrationStep1() {
     if (document.getElementById("register-name").value == "" ||
         document.getElementById("register-email").value == "" ||
         document.getElementById("register-pw").value == "") {
-            document.getElementById("incomplete-msg-reg").style = 'display: inline';
-            document.getElementById("password-match-msg").style = 'display: none';
-    } 
-    else if(document.getElementById("register-pw").value != 
-            document.getElementById("register-pw2").value ){
-            document.getElementById("incomplete-msg-reg").style = 'display: none';
-            document.getElementById("password-match-msg").style = 'display: inline';
+        document.getElementById("incomplete-msg-reg").style = 'display: inline';
+        document.getElementById("password-match-msg").style = 'display: none';
+    }
+    else if (document.getElementById("register-pw").value !=
+        document.getElementById("register-pw2").value) {
+        document.getElementById("incomplete-msg-reg").style = 'display: none';
+        document.getElementById("password-match-msg").style = 'display: inline';
     } else {
         $('#registerModal').modal('hide');
         $('#sexModal').modal('show');

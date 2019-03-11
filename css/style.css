@@ -11,18 +11,30 @@
     --menu-buttons-color:#A0CBCD;
     */
     
-    --body-color:#375C7F;
+    /* --body-color:#375C7F;
     --shadow-color:#0A2D4D;
     --well-color:#5F7C99;
-    --highlight-well-color:#6F89A3;
-    --primary-button-color:#AD5693;
-    --primary-button-pressed-color:#8C1C6A;
-    --secondary-button-color:#BECC92;
-    --secondary-button-pressed-color:#A6BA6A;
+    --highlight-well-color:#6F89A3; */
+    --body-color:#6F8AA3;
+    --shadow-color:#395E81;
+    --well-color:#91A5B9;
+    --highlight-well-color:#B9C5D2;
+    /* --primary-button-color:#AD5693;
+    --primary-button-pressed-color:#8C1C6A; */
+    --primary-button-color:#CCB566;
+    --primary-button-pressed-color:#B7A35B;
+    /* --secondary-button-color:#BECC92;
+    --secondary-button-pressed-color:#A6BA6A; */
+    --secondary-button-color:#BF5DA1;
+    --secondary-button-pressed-color:#AE5593;
+    --friend-event-button-color:#AAC164;
+    --friend-event-button-pressed-color:#9BB05B;
     --font-color:black;
     --menu-buttons-color:#A7B7C7;
     --menu-buttons-pressed-color:#6F89A3;
     --warning-red:#D10000;
+
+
     
 }
 /* JACOB, make the Beer, wine, liquor buttons this color: #FFBC3F, it might look back but try different shades of yellow*/
