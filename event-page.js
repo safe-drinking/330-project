@@ -41,6 +41,7 @@ function init() {
     localStorage.setItem("notify", "0");
     //REFRESHING the page will cause all the data to be lost if DONE is not pressed
     if (eventName !== "null") {
+        drinks = Number(localStorage.getItem("drinks_" + eventName));
         bac = Number(localStorage.getItem("bac_" + eventName));
         title = localStorage.getItem("event_" + eventName);
         document.getElementById("event-title").innerHTML = title;
@@ -57,9 +58,9 @@ function init() {
 
 function addDrink() {
     drinks++;
-    localStorage.setItem("drinks", drinks);
-    if (!user_state) {
-        bac = Math.round((bac + .03) * 100) / 100;
+    localStorage.setItem("drinks_" + eventName, drinks);
+    if(!user_state){
+        bac = Math.round((bac + .03) * 100)/100;
     } else {
         bac = updateBAC();
         bac = Math.round((bac) * 100) / 100;
