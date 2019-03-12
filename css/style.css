@@ -10,7 +10,8 @@
     --font-color:black;
     --menu-buttons-color:#A0CBCD;
     */
-    
+    --body-gradient:linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+    --body-gradient-color1:#874da2;
     /* --body-color:#375C7F;
     --shadow-color:#0A2D4D;
     --well-color:#5F7C99;
@@ -38,6 +39,10 @@
 
     
 }
+html{
+    height:100vh;
+}
+
 body{
     font-family: 'Nunito', sans-serif !important;
     color:var(--font-color)!important;
@@ -47,16 +52,17 @@ body{
 
 /*Login/Register Page (index.html)*/
 .login-body{
-    background-color: var(--body-color) !important;
+    /* background-color: var(--body-color) !important; */
+    background-image: var(--body-gradient);
 }
 .login-message-ctnr{
-    padding:100px 20px 100px 20px;
+    padding:300px 20px 100px 20px;
     color:rgb(236, 234, 234);
-    text-shadow:4px 4px var(--shadow-color);
+    /* text-shadow:4px 4px var(--shadow-color); */
 }
 .login-message{
     margin:auto;
-    font-size:90px;
+    font-size:150px;
     text-align:center;
 }
 .login-modal{
@@ -70,7 +76,7 @@ body{
 }
 .login-modal-dialog{
     width:90%!important;
-    margin-top:20%!important;
+    margin-top:35%!important;
 }
 .modal-header{
     border-bottom: 3px solid lightgray!important;
@@ -85,20 +91,25 @@ body{
     padding-bottom:150px!important;
 }
 .login-button{
-    font-size:80px;
+    font-size:75px;
     margin-top:80px;
     padding: 15px;
-    background-color:var(--primary-button-color);
-    border:none;
-    box-shadow:4px 4px var(--shadow-color);
+    /* background-color:var(--primary-button-color); */
+    /* background-color:rgb(39, 39, 39); */
+    background-color:transparent;
+    border:5px solid white;
+    /* box-shadow:4px 4px var(--shadow-color); */
+    border-radius: 100px;
     /*color:rgb(226, 226, 226);*/
-    color:var(--font-color);
+    /* color:var(--font-color); */
+    color:white;
+    width:600px;
 }
 .login-button:active{
-    background-color: var(--primary-button-pressed-color);
+    background-color: rgba(255,255,255,.5);
 }
 .login-buttons-ctnr{
-    padding:20%;
+    padding-top:300px;
     text-align:center;
 }
 .register-input{

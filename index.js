@@ -99,10 +99,10 @@ function setUserInfo(userID) {
     // john doe
     // 175 lb
     else if (userID == 1) {
-        events = 5;
+        events = 2;
         friends = 5;
         var friendsList = ["The Hound", "Meryn Trant", "Cersei Lannister", "Joffrey", "Walder Frey"];
-        var eventsList = ["The Hound's Duel", "Meryn Trant's Baby Shower", "Cersei's 21st", "Joffrey's Wedding", "Dinner at Walder Frey's"];
+        var eventsList = ["Hound's Duel", "Meryn's Bday", "Cersei's 21st", "Joffrey's Wedding", "Frey's Dinner"];
         week_data = [1, 4, 0, 0, 0, 4];
         month_data = [7, 2, 2, 10, 0, 1, 2, 1, 0, 5, 7];
         year_data = [21, 36, 33, 19, 33, 33, 30, 40, 16, 36, 19, 40];
@@ -128,10 +128,10 @@ function setUserInfo(userID) {
     // jane doe
     // 125 lb
     else {
-        events = 5;
+        events = 3;
         friends = 5;
         var friendsList = ["Captain America", "Thanos", "Captain Marvel", "Black Widow", "Iron Man"];
-        var eventsList = ["Cap's Welcome Home", "Thanos' Baby Shower", "Captain Marvel's 21st", "Black Widow's Wedding", "Dinner at Iron Man's"];
+        var eventsList = ["Cap's Homecoming", "Thanos' Bday", "Cap's 21st", "Black Widow's Wedding", "Dinner at Iron Man's"];
         week_data = [3, 0, 0, 0, 0, 6];
         month_data = [9, 1, 1, 8, 0, 1, 6, 2, 0, 1, 8];
         year_data = [34, 35, 23, 39, 21, 20, 22, 22, 18, 19, 25, 24];
