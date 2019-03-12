@@ -16,6 +16,7 @@
     --well-color:#5F7C99;
     --highlight-well-color:#6F89A3; */
     --body-color:#6F8AA3;
+    /* --body-color: white; */
     --shadow-color:#395E81;
     --well-color:#91A5B9;
     --highlight-well-color:#B9C5D2;
@@ -37,7 +38,6 @@
 
     
 }
-/* JACOB, make the Beer, wine, liquor buttons this color: #FFBC3F, it might look back but try different shades of yellow*/
 body{
     font-family: 'Nunito', sans-serif !important;
     color:var(--font-color)!important;
