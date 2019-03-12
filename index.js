@@ -16,7 +16,7 @@ function init() {
     // for (i = 0; i < friends; i++) {
     //     localStorage.setItem("friend_" + i, friendsList[i]);
 
-    }
+
     var j;
     for (j = 0; j < friendEvents; j++) {
         localStorage.setItem("friendEvent_" + j, friendEventsList[j]);
@@ -72,14 +72,14 @@ function RegistrationStep1() {
     }
 }
 
-function setUserInfo(userID){
+function setUserInfo(userID) {
     // Gender, weight, height, friends, events, drinking
     // empty user profile
 
     // Mr. Empty
     // 150 lb
-    if(userID == 0){
-        events  = 0;
+    if (userID == 0) {
+        events = 0;
         friends = 0;
 
         week_data = [0, 0, 0, 0, 0, 0];
@@ -98,7 +98,7 @@ function setUserInfo(userID){
     }
     // john doe
     // 175 lb
-    else if(userID == 1){
+    else if (userID == 1) {
         events = 5;
         friends = 5;
         var friendsList = ["The Hound", "Meryn Trant", "Cersei Lannister", "Joffrey", "Walder Frey"];
@@ -127,7 +127,7 @@ function setUserInfo(userID){
     }
     // jane doe
     // 125 lb
-    else{
+    else {
         events = 5;
         friends = 5;
         var friendsList = ["Captain America", "Thanos", "Captain Marvel", "Black Widow", "Iron Man"];
@@ -176,7 +176,7 @@ function setWeight() {
     localStorage.setItem("weight", weight);
 }
 
-function setName(){
+function setName() {
     name = document.getElementById('register-name').value;
     localStorage.setItem("name", name)
 }
