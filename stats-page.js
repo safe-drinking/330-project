@@ -4,9 +4,17 @@ function goTo(location) {
 
 // member
 var drinks = 0;
-var stored_drinks = localStorage.getItem("drinks");
-if (stored_drinks != null && stored_drinks != "NaN") {
-    drinks = parseInt(localStorage.getItem("drinks"));
+// var stored_drinks = localStorage.getItem("drinks");
+// if (stored_drinks != null && stored_drinks != "NaN") {
+//     drinks = parseInt(localStorage.getItem("drinks"));
+// }
+var i;
+var eventName;
+for (i = 0; i < Number(localStorage.getItem("events")); i++){
+    var stored_drinks = localStorage.getItem("drinks_" + i);
+    if (stored_drinks != null && stored_drinks != "NaN") {
+        drinks += Number(localStorage.getItem("drinks_" + i));
+    }
 }
 
 // x values
