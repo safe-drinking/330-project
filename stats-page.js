@@ -18,9 +18,10 @@ var month = [30, 27, 24, 21, 18, 15, 12, 9, 6, 3, 0];
 var year = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 
 // y values
-var week_data = [3, 0, 0, 0, 0, 6, drinks]; //localStorage.getItem("drinks")];
-var month_data = [9, 1, 1, 8, 0, 1, 6, 2, 0, 1, 8];
-var year_data = [34, 35, 23, 39, 21, 20, 22, 22, 18, 19, 25, 24];
+var week_data = JSON.parse(localStorage.getItem("week_data"));
+week_data.push(drinks);
+var month_data = JSON.parse(localStorage.getItem("month_data"));
+var year_data = JSON.parse(localStorage.getItem("year_data"));
 
 var data_values = [year_data, month_data, week_data];
 var data_types = [year, month, week];
