@@ -1,6 +1,6 @@
 
 function init(){
-    
+    getName();
 }
 
 function logout(){
@@ -12,5 +12,8 @@ function goTo(location){
     document.location.href = location;
 }
 
+function getName(){
+    document.getElementsByClassName("settings-name")[0].innerText = localStorage.getItem("name");
+}
 
 init();
