@@ -13,7 +13,11 @@ function goTo(location){
 }
 
 function getName(){
-    document.getElementsByClassName("settings-name")[0].innerText = localStorage.getItem("name");
+    document.getElementsByClassName("settings-name")[0].innerHTML = localStorage.getItem("name");
+}
+
+function changeName(){
+
 }
 
 init();
