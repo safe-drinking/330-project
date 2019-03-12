@@ -18,9 +18,9 @@ function init() {
 
 
     var j;
-    for (j = 0; j < friendEvents; j++) {
-        localStorage.setItem("friendEvent_" + j, friendEventsList[j]);
-    }
+    // for (j = 0; j < friendEvents; j++) {
+    //     localStorage.setItem("friendEvent_" + j, friendEventsList[j]);
+    // }
     document.getElementById("incomplete-msg").style = 'display: none';
     document.getElementById("incorrect-msg").style = 'display: none';
     document.getElementById("incomplete-msg-reg").style = 'display: none';
