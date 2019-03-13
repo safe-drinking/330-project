@@ -53,12 +53,14 @@ var myChart = new Chart(ctx, {
             {
                 data: week_data,
                 label: "day of the week",
-                borderColor: "#3e95cd",
+                borderColor: "#633b3b",
                 pointHoverRadius: 20,
                 pointHitRadius: 40,
                 pointRadius: 12,
-                pointBorderColor: "black",
-                pointBackgroundColor: "#375C7F"
+                // pointBorderColor: "#633b3b",
+                pointColor:"#633b3b",
+                pointBackgroundColor: "#633b3b"
+                // backgroundColor: ["#633b3b"]
             }
         ]
     },
@@ -95,13 +97,17 @@ var myChart = new Chart(ctx, {
         title: {
             display: true,
             text: 'Past 7 Days',
-            fontSize: 50
+            fontSize: 50,
+            fontFamily: 'Nunito',
+            fontStyle: 'bold',
+            fontColor:'black'
         }
     }
 
 });
 
 function pointClicked(ctx, eventarr) {
+    if (eventarr[0] == undefined) return;
     var index = eventarr[0]._index;
     var date_string = getDate(index);
     var drinks = data_values[view_type][index];
