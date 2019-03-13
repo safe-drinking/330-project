@@ -579,15 +579,18 @@ body{
 
 /*Settings Page*/
 .settings-body{
-    background-color:var(--body-color)!important;
+    /* background-color:var(--body-color)!important; */
+    background-image:var(--body-gradient)!important;
 }
 .settings-header-info{
     width: 852px;
     margin: 40px 60px 40px 60px;
     height: 315px;
     display: flex;
-    background-color:var(--well-color);
+    /* background-color:var(--well-color); */
     height: 936px;
+    background-color: rgba(255,255,255,.2)!important;
+
 }
 .material-icons.settings-icon{
     font-size: 285px;
@@ -608,29 +611,39 @@ body{
     width: 900px;
     font-size:80px;
     margin-top:80px;
-    background-color:var(--primary-button-color);
+    /* background-color:var(--primary-button-color); */
     padding: 15px;
-    border:none;
+    /* border:none; */
     margin: 40px;
-    box-shadow:4px 4px var(--shadow-color);
-    color:var(--font-color);
+    /* box-shadow:4px 4px var(--shadow-color); */
+    /* color:var(--font-color); */
+    color:var(--gradient-font-color);
+    border:none;
+    box-shadow:6px 9px var(--gradient-shadow);
+    background-color:rgba(255,255,255,.3);
+    border-radius: 100px;
 }
 .logout-button:active{
-    background-color:var(--primary-button-pressed-color);
+    /* background-color:var(--primary-button-pressed-color); */
+    background-color:rgba(255,255,255,.4);
+
 }
 
 /* Stats Page */
 .stats-page-body{
-    background-color:white;
+    /* background-color:white; */
+    background-image:var(--body-gradient);
     
 }
 .stats-background{
-    background-color:white;
+    /* background-color:white; */
+    background-color:rgba(255,255,255,.3);
+    margin:0px 20px 20px 20px;
     padding:20px 20px 20px 20px;
     height:1315px!important;
 }
 .bottom-bar{
-    margin:36px 0px 0px 0px;
+    margin:15.5px 0px 0px 0px;
 }
 .my-pill {
     font-size: 50px;
@@ -638,20 +651,31 @@ body{
     justify-content: flex-end;
     /*margin-right: 65px;*/
     border-bottom: 2px solid var(--body-color);
+    background-color:white;
+    padding: 10px 10px 0px 10px;
+}
+.my-pill li:active{
+    background-color: var(--gradient-shadow)!important;
 }
 .my-chart {
     padding: 40px 40px 10px 10px;
+    background-color:white;
 }
 .my-alert {
     font-size: 40px;
     margin: 40px;
+    box-shadow:7px 7px var(--gradient-shadow)!important;
+    background-color:rgba(255, 186, 59, 0.897)!important;
+    color:var(--gradient-font-color)!important;
 }
 
 .stats-grid {
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+    padding: 0px 20px 0px 20px;
     display: grid;
     grid-template-columns: 50% 50%;
+    background-color:white;
 }
 
 .panel {
@@ -670,8 +694,8 @@ body{
 .my-hr{
     width: 92%;
     height: 5px;
-    background-color: #337AB7;
-    border-color: #337AB7;
+    background-color: var(--gradient-shadow);
+    border-color: var(--gradient-shadow);
     
 }
 
