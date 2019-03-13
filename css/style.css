@@ -12,6 +12,8 @@
     */
     --body-gradient:linear-gradient(45deg, #874da2 0%, #c43a30 100%);
     --body-gradient-color1:#874da2;
+    --gradient-font-color:black;
+    --gradient-shadow:rgb(99, 59, 59);
     /* --body-color:#375C7F;
     --shadow-color:#0A2D4D;
     --well-color:#5F7C99;
@@ -161,7 +163,8 @@ body{
 
 /* Dashboard and the rest*/
 .dashboard-body{
-    background-color:var(--body-color)!important;
+    /* background-color:var(--body-color)!important; */
+    background-image: var(--body-gradient);
 }
 .jumbotron{
     text-align: center;
@@ -171,8 +174,10 @@ body{
     /* margin-top: 10px; */
     padding-top: 30px !important;
     padding-bottom: 30px !important;
-    background-color: var(--well-color)!important;
-    color:var(--font-color)!important;
+    /* background-color: var(--well-color)!important; */
+    /* color:var(--font-color)!important; */
+    background-color:rgba(255,255,255,.3)!important;
+    color:var(--gradient-font-color)!important;
 }
 .jumbo-ctnr{
     width: 90%!important;
@@ -180,20 +185,27 @@ body{
     padding: 0px !important;
 } 
 .new-event-ctnr{
-    padding: 11.5% 15.5% 11.5% 15.5%!important;
+    padding: 10% 10% 10% 16%!important;
 }
 .new-event-btn{
-    font-size: 70px!important;
-    background-color:var(--primary-button-color);
-    border-radius: 5px;
-    padding: 10px 20px 10px 20px;
-    color:var(--font-color);
+    font-size: 67px!important;
+    /* background-color:var(--primary-button-color); */
+    background-color:rgba(255,255,255,.2);
+    border-radius: 100px;
+    padding: 20px 30px 20px 30px;
+    /* color:var(--font-color); */
+    color:var(--gradient-font-color);
     border:none;
-    box-shadow:4px 4px var(--shadow-color);
+    box-shadow:6px 9px var(--gradient-shadow);
+    /* border:3px solid var(--gradient-font-color); */
+
+    /* box-shadow:4px 4px var(--shadow-color); */
 
 }
 .new-event-btn:active{
-    background-color: var(--primary-button-pressed-color);
+    /* background-color: var(--primary-button-pressed-color); */
+    /* box-shadow:none; */
+    background-color:rgba(255,255,255,.4);
 }
 .new-event-btn p{
     margin:0px;
@@ -211,7 +223,8 @@ body{
     height: 758px;
     overflow-y: scroll;
     border:none!important;
-    background-color: var(--well-color)!important;
+    /* background-color: var(--well-color)!important; */
+    background-color: rgba(255,255,255,.2)!important;
 }
 #events-list-content button{
     background-color: var(--secondary-button-color);
@@ -225,15 +238,22 @@ body{
     background-color: var(--secondary-button-pressed-color);
 }
 .clear-events-btn{
-    background-color: var(--primary-button-color);
-    margin-left: 480px;
-    padding: 10px 10px 10px 10px;
+    /* background-color: var(--primary-button-color); */
+    margin-left: 450px;
+    padding: 10px 30px 10px 30px;
     border:none;
-    box-shadow:4px 4px var(--shadow-color);
-    color:var(--font-color);
+    /* box-shadow:4px 4px var(--shadow-color); */
+    /* color:var(--font-color); */
+    background-color:rgba(255,255,255,.2);
+    border-radius: 70px;
+    /* border:3px solid var(--gradient-font-color); */
+    margin-bottom:15px;
+    box-shadow:4px 7px var(--gradient-shadow);
 }
 .clear-events-btn:active{
-    background-color:var(--primary-button-pressed-color);
+    /* background-color:var(--primary-button-pressed-color); */
+    background-color:rgba(255,255,255,.4);
+
 }
 .menu-btn .icon{
     font-size: 140px;
@@ -246,17 +266,20 @@ body{
 
 .btn-group button{
     padding:20px 30px 20px 30px;
-    background-color: var(--menu-buttons-color);
+    /* background-color: var(--menu-buttons-color); */
     border:none;
-    box-shadow: 0px 0px var(--shadow-color);
+    /* box-shadow: 0px 0px var(--shadow-color); */
+    background-color:rgba(255,255,255,.3);
     width: 245px;
+    color:var(--gradient-font-color);
 }
 .btn-group button:active{
-    background-color: var(--menu-buttons-pressed-color);
+    /* background-color: var(--menu-buttons-pressed-color); */
+    background-color:rgba(255,255,255,.5);
 }
  
 .selected-btn{
-    background-color:var(--well-color)!important;
+    background-color:rgba(255,255,255,.1)!important;
 }
 
 /*Event page*/
