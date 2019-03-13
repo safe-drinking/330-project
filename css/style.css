@@ -190,7 +190,7 @@ body{
 .new-event-btn{
     font-size: 67px!important;
     /* background-color:var(--primary-button-color); */
-    background-color:rgba(255,255,255,.2);
+    background-color:rgba(255,255,255,.3);
     border-radius: 100px;
     padding: 20px 30px 20px 30px;
     /* color:var(--font-color); */
@@ -234,7 +234,7 @@ body{
     /* box-shadow:4px 4px var(--shadow-color); */
     color:var(--gradient-font-color);
     background-color:rgba(255,255,255,.3);
-    box-shadow:5px 5px var(--gradient-shadow);
+    box-shadow:7px 7px var(--gradient-shadow);
 }
 #events-list-content button:active{
     /* background-color: var(--secondary-button-pressed-color); */
@@ -247,7 +247,7 @@ body{
     border:none;
     /* box-shadow:4px 4px var(--shadow-color); */
     /* color:var(--font-color); */
-    background-color:rgba(255,255,255,.2);
+    background-color:rgba(255,255,255,.3);
     border-radius: 70px;
     /* border:3px solid var(--gradient-font-color); */
     margin-bottom:15px;
@@ -287,7 +287,7 @@ body{
 
 /*Event page*/
 .event-page-body{
-    background-color:var(--body-color)!important;
+    background-image:var(--body-gradient)!important;
 }
 .event-modal{
     width:100%;
@@ -301,14 +301,19 @@ body{
     height:100px!important;
 }
 .event-title-btn{
-    background-color:var(--secondary-button-color);
+    /* background-color:var(--secondary-button-color); */
     padding: 10px;
     border:none;
-    box-shadow: 4px 4px var(--shadow-color);
-    color:var(--font-color);
+    /* box-shadow: 4px 4px var(--shadow-color); */
+    /* color:var(--font-color); */
+    color:var(--gradient-font-color);
+    background-color:rgba(255,255,255,.3);
+    box-shadow:5px 5px var(--gradient-shadow);
 }
 .event-title-btn:active{
-    background-color: var(--secondary-button-pressed-color);
+    /* background-color: var(--secondary-button-pressed-color); */
+    background-color:rgba(255,255,255,.5);
+
 }
 .event-modal-content{
     height:700px!important;
@@ -329,10 +334,12 @@ body{
 }
 .bac-checker{
     font-size:85px;
-    background-color:var(--highlight-well-color);
+    /* background-color:var(--highlight-well-color); */
     display: flex;
     justify-content: center;
     margin: 70px 200px 70px 200px;
+    border:none;
+    background-color: rgba(255,255,255,.3);
 }
 #bac-value{
     margin-left: 20px;
@@ -346,12 +353,14 @@ body{
 .drinks-btn-container{
     font-size: 50px;
     text-align: center;
-    border: solid 3px black;
+    /* border: solid 3px black; */
+    border:none;
     background-color: white;
     width: 33%;
     margin: 10px;
     padding: 10px 0px 10px 0px;
-    box-shadow: 8px 8px var(--shadow-color);
+    box-shadow: 8px 8px var(--gradient-shadow);
+
 }
 .drinks-btn-container:active{
     box-shadow: 0px 0px;
@@ -368,15 +377,21 @@ body{
 }
 .add-buddy-button{
     font-size: 70px;
-    background-color:var(--primary-button-color);
+    /* background-color:var(--primary-button-color); */
     margin: 70px;
     padding: 20px;
     border:none;
-    box-shadow:4px 4px var(--shadow-color);
-    color:var(--font-color);
+    /* box-shadow:4px 4px var(--shadow-color); */
+    /* color:var(--font-color); */
+    color:var(--gradient-font-color);
+    background-color:rgba(255,255,255,.3);
+    box-shadow:5px 8px var(--gradient-shadow);
+    border-radius:100px;
 }
 .add-buddy-button:active{
-    background-color: var(--primary-button-pressed-color);
+    /* background-color: var(--primary-button-pressed-color); */
+    background-color:rgba(255,255,255,.5);
+
 }
 
 .add-buddy-modal-body p{
@@ -402,15 +417,21 @@ body{
 }
 .exit-event-button{
     font-size: 70px;
-    background-color: var(--primary-button-color);
+    /* background-color: var(--primary-button-color); */
     margin: 70px;
     padding: 20px;
     border:none;
-    box-shadow:4px 4px var(--shadow-color);
-    color:var(--font-color);
+    /* box-shadow:4px 4px var(--shadow-color); */
+    /* color:var(--font-color); */
+    color:var(--gradient-font-color);
+    background-color:rgba(255,255,255,.3);
+    box-shadow:5px 8px var(--gradient-shadow);
+    border-radius:100px;
 }
 .exit-event-button:active{
-    background-color: var(--primary-button-pressed-color);
+    /* background-color: var(--primary-button-pressed-color); */
+    background-color:rgba(255,255,255,.5);
+
 }
 .drink-img{
     height: 75%;
@@ -422,7 +443,8 @@ body{
     margin: 35px;
 }
 .shared-friend-ctnr{
-    background-color:var(--highlight-well-color);
+    border:none;
+    background-color: rgba(255,255,255,.3);
 }
 .shared-friend-ctnr p{
     font-size: 50px;

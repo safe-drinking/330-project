@@ -135,7 +135,7 @@ function viewStats() {
 }
 
 function openWarning() {
-    document.getElementById("bac-value").style = "color: red";
+    document.getElementById("bac-value").style = "color: var(--warning-red)";
     localStorage.setItem("notify", "1");
     document.getElementById("warningModal").style = 'display: inline';
 
