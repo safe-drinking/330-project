@@ -127,7 +127,7 @@ function setUserInfo(userID) {
     }
     // jane doe
     // 125 lb
-    else {
+    else if (userID == 2){
         events = 3;
         friends = 5;
         var friendsList = ["Captain America", "Thanos", "Captain Marvel", "Black Widow", "Iron Man"];
@@ -155,10 +155,30 @@ function setUserInfo(userID) {
             localStorage.setItem("event_" + i, eventsList[i]);
         }
     }
+    // Registering user
+    else if (userID == -1) {
+        events = 0;
+        friends = 0;
+
+        week_data = [0, 0, 0, 0, 0, 0];
+        month_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+        localStorage.clear();
+        localStorage.setItem("week_data", JSON.stringify(week_data));
+        localStorage.setItem("month_data", JSON.stringify(month_data));
+        localStorage.setItem("year_data", JSON.stringify(year_data));
+        localStorage.setItem("friends", friends);
+        localStorage.setItem("events", events);
+    }
+    else{
+        throw "NOT VALID USER";
+    }
 }
 
 function register() {
     document.location.href = "dashboard.html";
+    setUserInfo(-1);
 }
 
 function setSex() {
