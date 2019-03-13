@@ -1,15 +1,5 @@
 :root{
-    /*
-    --body-color:#009da5;
-    --shadow-color:#00565A;
-    --well-color:#80BABD;
-    --highlight-well-color:#A0CBCD;
-    --primary-button-color:#e53771;
-    --primary-button-pressed-color:#A72953;
-    --secondary-button-color:pink;
-    --font-color:black;
-    --menu-buttons-color:#A0CBCD;
-    */
+    /* background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%); */
     --body-gradient:linear-gradient(45deg, #874da2 0%, #c43a30 100%);
     --body-gradient-color1:#874da2;
     --gradient-font-color:black;
@@ -456,20 +446,26 @@ body{
 }
 /* Friends Page */
 .friends-body{
-    background-color:var(--body-color)!important;
+    /* background-color:var(--body-color)!important; */
+    background-image:var(--body-gradient)!important;
 }
 .friend-btn{
     font-size: 60px;
-    background-color:var(--secondary-button-color);
+    /* background-color:var(--secondary-button-color); */
     border:none;
-    box-shadow:4px 4px var(--shadow-color);
+    /* box-shadow:4px 4px var(--shadow-color); */
     /*color:rgb(226, 226, 226);*/
-    color:var(--font-color);
+    /* color:var(--font-color); */
     margin: 20px 0px 10px 20px;
     padding: 10px;
+    color:var(--gradient-font-color);
+    background-color:rgba(255,255,255,.3);
+    box-shadow:7px 7px var(--gradient-shadow);
 }
 .friend-btn:active{
-    background-color:var(--secondary-button-pressed-color);
+    /* background-color:var(--secondary-button-pressed-color); */
+    background-color:rgb(255,255,255,.5);
+
 }
 #friends-list{
     height:1083px;
@@ -480,22 +476,31 @@ body{
 }
 .add-friend-btn{
     font-size: 60px;
-    background-color:var(--primary-button-color);
+    /* background-color:var(--primary-button-color); */
     border:none;
-    box-shadow:4px 4px var(--shadow-color);
+    /* box-shadow:4px 4px var(--shadow-color); */
     /*color:rgb(226, 226, 226);*/
-    color:var(--font-color);
+    /* color:var(--font-color); */
     margin: 10px 0px 10px 0px;
-    padding: 10px;
+    padding: 10px 30px 10px 30px;
+    background-color:rgba(255,255,255,.3);
+    border-radius: 70px;
+    /* border:3px solid var(--gradient-font-color); */
+    /* margin-bottom:15px; */
+    box-shadow:4px 7px var(--gradient-shadow);
 }
 .add-friend-btn:active{
-    background-color:var(--primary-button-pressed-color);
+    /* background-color:var(--primary-button-pressed-color); */
+    background-color:rgba(255,255,255,.4);
+
 }
 .friends-well{
     margin:10px 40px 0px 40px;
-    background-color: var(--well-color)!important;
+    /* background-color: var(--well-color)!important; */
     border:none!important;
     overflow-y:scroll;
+    background-color: rgba(255,255,255,.2)!important;
+
 }
 .add-modal-body{
     padding:100px 20px 100px 20px!important;
@@ -506,7 +511,8 @@ body{
 
 /*Friend Page - Profile */
 .friends-profile-body{
-    background-color:var(--body-color)!important;
+    /* background-color:var(--body-color)!important; */
+    background-image:var(--body-gradient);
 }
 .friends-header-info{
     width: 852px;
@@ -514,8 +520,10 @@ body{
     height: 315px;
     display: flex;
     flex-wrap: wrap;
-    background-color:var(--well-color);
+    /* background-color:var(--well-color); */
     height: 936px;
+    background-color: rgba(255,255,255,.2)!important;
+
 }
 .material-icons.friends-icon{
     font-size: 285px;
@@ -537,28 +545,36 @@ body{
 .delete-friend-button{
     width: 750px;
     height: 125px;
-    font-size: 60px;
+    font-size: 65px;
     text-align: center;
     margin: 51px;
-    background-color:var(--warning-red);
+    /* background-color:var(--warning-red); */
+    background-color:rgba(201, 0, 0, 0.801);
     border: none;
-    box-shadow: 2px 2px;
+    box-shadow: 4px 4px var(--gradient-shadow);
 }
 .delete-friend-button:active{
-    background-color: #AD1818;
+    background-color: rgb(167, 22, 22);
 }
 .friend-back-button{
     width: 900px;
     font-size:80px;
     margin-top:80px;
-    background-color:var(--primary-button-color);
+    /* background-color:var(--primary-button-color); */
     padding: 15px;
-    border:none;
+    /* border:none; */
     margin: 40px;
-    box-shadow:4px 4px var(--shadow-color);
+    /* box-shadow:4px 4px var(--shadow-color); */
+    color:var(--gradient-font-color);
+    border:none;
+    box-shadow:6px 9px var(--gradient-shadow);
+    background-color:rgba(255,255,255,.3);
+    border-radius: 100px;
 }
 .friend-back-button:active{
-    background-color:var(--primary-button-pressed-color);
+    /* background-color:var(--primary-button-pressed-color); */
+    background-color:rgba(255,255,255,.4);
+
 }
 
 /*Settings Page*/
