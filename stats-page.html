@@ -23,7 +23,7 @@
             Statistics
         </div>
     </div>
-    <div class="stats-background">
+    <div class="graph-cntr">
         <ul class="nav nav-pills my-pill">
             <li id="pill1" onclick="pillClick(0)" role="presentation" value="0"><a href="#">year</a></li>
             <li id="pill2" onclick="pillClick(1)" role="presentation" value="1"><a href="#">month</a></li>
@@ -45,12 +45,12 @@
                 </div>
             </div>
         </div>
-
-        <br>
+    </div>
+    <!-- <br>
         <hr class="my-hr">
-        <br>
-
-        <h1 class="alert-header">Trends</h1>
+        <br> -->
+    <div class="stats-background">
+        <h1 class="alert-header">Current Trend</h1>
         <div class="alert alert-warning my-alert" role="alert" data-toggle="modal" data-target="#exampleModal">
             <strong>Warning!</strong> Watch out, you had more than average this week.
         </div>
@@ -93,28 +93,28 @@
     </div>
 
     <!--<div class="footer">-->
-        <div class="bottom-bar btn-group">
-            <button onclick="goTo('dashboard.html')" type="button" class="menu-btn">
-                <i class="material-icons icon">
-                    home
-                </i>
-            </button>
-            <button type="button" class="menu-btn selected-btn">
-                <i class="material-icons icon">
-                    show_chart
-                </i>
-            </button>
-            <button onclick="goTo('friends.html')" type="button" class="menu-btn">
-                <i class="material-icons icon">
-                    people
-                </i>
-            </button>
-            <button onclick="goTo('settings.html')" type="button" class="menu-btn">
-                <i class="material-icons icon">
-                    settings
-                </i>
-            </button>
-        </div>
+    <div class="bottom-bar btn-group ">
+        <button onclick="goTo('dashboard.html')" type="button" class="menu-btn">
+            <i class="material-icons icon">
+                home
+            </i>
+        </button>
+        <button type="button" class="menu-btn selected-btn">
+            <i class="material-icons icon">
+                show_chart
+            </i>
+        </button>
+        <button onclick="goTo('friends.html')" type="button" class="menu-btn">
+            <i class="material-icons icon">
+                people
+            </i>
+        </button>
+        <button onclick="goTo('settings.html')" type="button" class="menu-btn">
+            <i class="material-icons icon">
+                person
+            </i>
+        </button>
+    </div>
     <!--</div>-->
 </body>
 

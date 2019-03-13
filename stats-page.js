@@ -4,9 +4,17 @@ function goTo(location) {
 
 // member
 var drinks = 0;
-var stored_drinks = localStorage.getItem("drinks");
-if (stored_drinks != null && stored_drinks != "NaN") {
-    drinks = parseInt(localStorage.getItem("drinks"));
+// var stored_drinks = localStorage.getItem("drinks");
+// if (stored_drinks != null && stored_drinks != "NaN") {
+//     drinks = parseInt(localStorage.getItem("drinks"));
+// }
+var i;
+var eventName;
+for (i = 0; i < Number(localStorage.getItem("events")); i++){
+    var stored_drinks = localStorage.getItem("drinks_" + i);
+    if (stored_drinks != null && stored_drinks != "NaN") {
+        drinks += Number(localStorage.getItem("drinks_" + i));
+    }
 }
 
 // x values
@@ -18,9 +26,10 @@ var month = [30, 27, 24, 21, 18, 15, 12, 9, 6, 3, 0];
 var year = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 
 // y values
-var week_data = [3, 0, 0, 0, 0, 6, drinks]; //localStorage.getItem("drinks")];
-var month_data = [9, 1, 1, 8, 0, 1, 6, 2, 0, 1, 8];
-var year_data = [34, 35, 23, 39, 21, 20, 22, 22, 18, 19, 25, 24];
+var week_data = JSON.parse(localStorage.getItem("week_data"));
+week_data.push(drinks);
+var month_data = JSON.parse(localStorage.getItem("month_data"));
+var year_data = JSON.parse(localStorage.getItem("year_data"));
 
 var data_values = [year_data, month_data, week_data];
 var data_types = [year, month, week];
@@ -44,12 +53,14 @@ var myChart = new Chart(ctx, {
             {
                 data: week_data,
                 label: "day of the week",
-                borderColor: "#3e95cd",
+                borderColor: "#633b3b",
                 pointHoverRadius: 20,
                 pointHitRadius: 40,
                 pointRadius: 12,
-                pointBorderColor: "black",
-                pointBackgroundColor: "#375C7F"
+                // pointBorderColor: "#633b3b",
+                pointColor:"#633b3b",
+                pointBackgroundColor: "#633b3b"
+                // backgroundColor: ["#633b3b"]
             }
         ]
     },
@@ -86,13 +97,17 @@ var myChart = new Chart(ctx, {
         title: {
             display: true,
             text: 'Past 7 Days',
-            fontSize: 50
+            fontSize: 50,
+            fontFamily: 'Nunito',
+            fontStyle: 'bold',
+            fontColor:'black'
         }
     }
 
 });
 
 function pointClicked(ctx, eventarr) {
+    if (eventarr[0] == undefined) return;
     var index = eventarr[0]._index;
     var date_string = getDate(index);
     var drinks = data_values[view_type][index];

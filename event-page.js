@@ -19,14 +19,14 @@ var currentClickedBuddy;
 
 
 function init() {
-    if(localStorage.getItem("gender")== 'undefined' || localStorage.getItem("weight") == "" || localStorage.getItem("weight") == null || localStorage.getItem("gender") == null) {
+    if (localStorage.getItem("gender") == 'undefined' || localStorage.getItem("weight") == "" || localStorage.getItem("weight") == null || localStorage.getItem("gender") == null) {
         user_state = 0;
-    } else{
+    } else {
         gender = localStorage.getItem("gender");
         weight = localStorage.getItem("weight");
         user_state = 1;
     }
-    
+
     events = localStorage.getItem("events");
     eventName = localStorage.getItem("thisEvent");
     friends = Number(localStorage.getItem("friends"));
@@ -41,6 +41,7 @@ function init() {
     localStorage.setItem("notify", "0");
     //REFRESHING the page will cause all the data to be lost if DONE is not pressed
     if (eventName !== "null") {
+        drinks = Number(localStorage.getItem("drinks_" + eventName));
         bac = Number(localStorage.getItem("bac_" + eventName));
         title = localStorage.getItem("event_" + eventName);
         document.getElementById("event-title").innerHTML = title;
@@ -57,12 +58,12 @@ function init() {
 
 function addDrink() {
     drinks++;
-    localStorage.setItem("drinks", drinks);
+    localStorage.setItem("drinks_" + eventName, drinks);
     if(!user_state){
         bac = Math.round((bac + .03) * 100)/100;
     } else {
         bac = updateBAC();
-        bac = Math.round((bac) * 100)/100;
+        bac = Math.round((bac) * 100) / 100;
     }
 
     localStorage.setItem("bac_" + eventName, bac);
@@ -106,7 +107,12 @@ function closeFriendsModal() {
 }
 
 function changeName() {
-    title = document.getElementById("title").value;
+    if (document.getElementById("title").value == "") {
+        title = "New Event";
+    }
+    else {
+        title = document.getElementById("title").value;
+    }
     localStorage.setItem("event_" + eventName, title);
     document.getElementById("event-title").innerHTML = title;
 }
@@ -129,7 +135,7 @@ function viewStats() {
 }
 
 function openWarning() {
-    document.getElementById("bac-value").style = "color: red";
+    document.getElementById("bac-value").style = "color: var(--warning-red)";
     localStorage.setItem("notify", "1");
     document.getElementById("warningModal").style = 'display: inline';
 
@@ -157,12 +163,12 @@ function goTo(location) {
     document.location.href = location;
 }
 
-function updateBAC(){
+function updateBAC() {
     SD = drinks;
     BW = (.50 + (gender * .09));
-    Wt = 0.453592*weight;
+    Wt = 0.453592 * weight;
     MR = (.020 + (gender * (-.02)));
-    BAC = (((.806 * SD * 1.2)/(BW * Wt)) - MR);
+    BAC = (((.806 * SD * 1.2) / (BW * Wt)) - MR);
     return BAC;
 }
 
