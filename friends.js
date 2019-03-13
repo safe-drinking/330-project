@@ -29,7 +29,11 @@ function addBuddyName() {
         document.getElementById("incomplete-buddy-msg").style = 'display: inline';
 
     }
+    
     else {
+        if (friends == 0){
+            document.getElementById("friends-list-content").innerHTML = "";
+        }
         closeAddModal();
         localStorage.setItem("friend_" + friends,
             document.getElementById('buddy-name').value);
