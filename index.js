@@ -77,7 +77,6 @@ function setUserInfo(userID) {
     // empty user profile
 
     // Mr. Empty
-    // 150 lb
     if (userID == 0) {
         events = 0;
         friends = 0;
@@ -87,17 +86,12 @@ function setUserInfo(userID) {
         year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
         localStorage.clear();
-        localStorage.setItem("week_data", JSON.stringify(week_data));
-        localStorage.setItem("month_data", JSON.stringify(month_data));
-        localStorage.setItem("year_data", JSON.stringify(year_data));
+        storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 1);
         localStorage.setItem("weight", 150);
         localStorage.setItem("name", "Mr. Empty");
-        localStorage.setItem("friends", friends);
-        localStorage.setItem("events", events);
     }
     // john doe
-    // 175 lb
     else if (userID == 1) {
         events = 2;
         friends = 5;
@@ -108,25 +102,19 @@ function setUserInfo(userID) {
         year_data = [21, 36, 33, 19, 33, 33, 30, 40, 16, 36, 19, 40];
 
         localStorage.clear();
-        localStorage.setItem("week_data", JSON.stringify(week_data));
-        localStorage.setItem("month_data", JSON.stringify(month_data));
-        localStorage.setItem("year_data", JSON.stringify(year_data));
+        storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 1);
         localStorage.setItem("weight", 175);
         localStorage.setItem("name", "John Doe");
-        localStorage.setItem("friends", friends);
         var i;
         for (i = 0; i < friends; i++) {
             localStorage.setItem("friend_" + i, friendsList[i]);
         }
-        localStorage.setItem("events", events);
-        var i;
         for (i = 0; i < events; i++) {
             localStorage.setItem("event_" + i, eventsList[i]);
         }
     }
     // jane doe
-    // 125 lb
     else if (userID == 2){
         events = 3;
         friends = 5;
@@ -137,20 +125,15 @@ function setUserInfo(userID) {
         year_data = [34, 35, 23, 39, 21, 20, 22, 22, 18, 19, 25, 24];
 
         localStorage.clear();
-        localStorage.setItem("week_data", JSON.stringify(week_data));
-        localStorage.setItem("month_data", JSON.stringify(month_data));
-        localStorage.setItem("year_data", JSON.stringify(year_data));
+        storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 0);
         localStorage.setItem("weight", 125);
         localStorage.setItem("name", "Jane Doe");
-        localStorage.setItem("friends", friends);
         var i;
         for (i = 0; i < friends; i++) {
             localStorage.setItem("friend_" + i, friendsList[i]);
 
         }
-        localStorage.setItem("events", events);
-        var i;
         for (i = 0; i < events; i++) {
             localStorage.setItem("event_" + i, eventsList[i]);
         }
@@ -165,11 +148,7 @@ function setUserInfo(userID) {
         year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
         localStorage.clear();
-        localStorage.setItem("week_data", JSON.stringify(week_data));
-        localStorage.setItem("month_data", JSON.stringify(month_data));
-        localStorage.setItem("year_data", JSON.stringify(year_data));
-        localStorage.setItem("friends", friends);
-        localStorage.setItem("events", events);
+        storeData(week_data, month_data, year_data, friends, events);
     }
     else{
         throw "NOT VALID USER";
@@ -201,5 +180,12 @@ function setName() {
     localStorage.setItem("name", name)
 }
 
+function storeData(week_data, month_data, year_data, friends, events){
+    localStorage.setItem("week_data", JSON.stringify(week_data));
+    localStorage.setItem("month_data", JSON.stringify(month_data));
+    localStorage.setItem("year_data", JSON.stringify(year_data));
+    localStorage.setItem("friends", friends);
+    localStorage.setItem("events", events);
+}
 
 init();
