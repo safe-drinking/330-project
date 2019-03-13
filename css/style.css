@@ -227,15 +227,18 @@ body{
     background-color: rgba(255,255,255,.2)!important;
 }
 #events-list-content button{
-    background-color: var(--secondary-button-color);
+    /* background-color: var(--secondary-button-color); */
     margin-bottom: 15px;
     padding: 10px;
     border:none;
-    box-shadow:4px 4px var(--shadow-color);
-    color:var(--font-color);
+    /* box-shadow:4px 4px var(--shadow-color); */
+    color:var(--gradient-font-color);
+    background-color:rgba(255,255,255,.3);
+    box-shadow:5px 5px var(--gradient-shadow);
 }
 #events-list-content button:active{
-    background-color: var(--secondary-button-pressed-color);
+    /* background-color: var(--secondary-button-pressed-color); */
+    background-color:rgb(255,255,255,.5);
 }
 .clear-events-btn{
     /* background-color: var(--primary-button-color); */
