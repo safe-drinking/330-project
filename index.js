@@ -85,7 +85,6 @@ function setUserInfo(userID) {
         month_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-        localStorage.clear();
         storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 1);
         localStorage.setItem("weight", 150);
@@ -103,7 +102,6 @@ function setUserInfo(userID) {
         month_data = [7, 2, 2, 10, 0, 1, 2, 1, 0, 5, 7];
         year_data = [21, 36, 33, 19, 33, 33, 30, 40, 16, 36, 19, 40];
 
-        localStorage.clear();
         storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 1);
         localStorage.setItem("weight", 175);
@@ -128,7 +126,6 @@ function setUserInfo(userID) {
         month_data = [9, 1, 1, 8, 0, 1, 6, 2, 0, 1, 8];
         year_data = [34, 35, 23, 39, 21, 20, 22, 22, 18, 19, 25, 24];
 
-        localStorage.clear();
         storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 0);
         localStorage.setItem("weight", 125);
@@ -153,7 +150,6 @@ function setUserInfo(userID) {
         month_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-        localStorage.clear();
         storeData(week_data, month_data, year_data, friends, events);
     }
     else{
