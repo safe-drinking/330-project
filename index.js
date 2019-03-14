@@ -1,6 +1,8 @@
 var events;
 var gender;
 var weight;
+var height_ft;
+var height_in;
 var friends;
 var week_data;
 var month_data;
@@ -175,6 +177,13 @@ function setSex() {
 function setWeight() {
     weight = document.getElementsByClassName('height-input')[2].value;
     localStorage.setItem("weight", weight);
+}
+
+function setHeight() {
+    height_ft = document.getElementsByClassName('height-input')[0].value;
+    height_in = document.getElementsByClassName('height-input')[1].value;
+    localStorage.setItem("height_foot", height_ft);
+    localStorage.setItem("height_inch", height_in);
 }
 
 function setName() {
