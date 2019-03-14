@@ -532,7 +532,7 @@ body{
 .settings-main-info{
     width: 852px;
     height: 580px;
-    padding: 20px;
+    padding: 15px 20px 15px 50px;
     font-size: 80px;
 }
 .logout-button{

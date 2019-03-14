@@ -20,7 +20,13 @@ function getName(){
 }
 
 function getGender(){
-    document.getElementById("settings-gender").innerHTML = "Sex: " + localStorage.getItem("gender");
+    var gender_sex;
+    if (localStorage.getItem("gender") == 1) {
+        gender_sex = "Male";
+    } else {
+        gender_sex = "Female";
+    }
+    document.getElementById("settings-gender").innerHTML = "Sex: " + gender_sex;
 }
 
 function getHeight(){
@@ -28,7 +34,7 @@ function getHeight(){
 }
 
 function getWeight(){
-    document.getElementById("settings-weight").innerHTML = "Weight: " + localStorage.getItem("weight");
+    document.getElementById("settings-weight").innerHTML = "Weight: " + localStorage.getItem("weight") + " lb.";
 }
 
 

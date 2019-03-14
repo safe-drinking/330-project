@@ -72,6 +72,7 @@ function RegistrationStep1() {
         $('#registerModal').modal('hide');
         $('#sexModal').modal('show');
     }
+    setName();
 }
 
 function setUserInfo(userID) {
@@ -188,7 +189,7 @@ function setHeight() {
 
 function setName() {
     name = document.getElementById('register-name').value;
-    localStorage.setItem("name", name)
+    localStorage.setItem("name", name);
 }
 
 function storeData(week_data, month_data, year_data, friends, events){
