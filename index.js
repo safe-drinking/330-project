@@ -11,6 +11,7 @@ var year_data;
 
 function init() {
     localStorage.clear();
+    localStorage.setItem("sumDrinks", 0);
     var j;
     // for (j = 0; j < friendEvents; j++) {
     //     localStorage.setItem("friendEvent_" + j, friendEventsList[j]);

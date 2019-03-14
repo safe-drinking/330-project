@@ -3,7 +3,7 @@ function goTo(location) {
 }
 
 // member
-var drinks = 0;
+var drinks = localStorage.getItem("sumDrinks");
 var i;
 var eventName;
 for (i = 0; i < Number(localStorage.getItem("events")); i++){
@@ -12,6 +12,7 @@ for (i = 0; i < Number(localStorage.getItem("events")); i++){
         drinks += Number(localStorage.getItem("drinks_" + i));
     }
 }
+localStorage.setItem("sumDrinks", drinks);
 
 // x values
 var week = [6, 5, 4, 3, 2, 1, 0];
