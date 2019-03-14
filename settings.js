@@ -1,4 +1,4 @@
-
+var gender = "Female";
 function init(){
     getName();
     getGender();
@@ -20,7 +20,8 @@ function getName(){
 }
 
 function getGender(){
-    document.getElementById("settings-gender").innerHTML = "Sex: " + localStorage.getItem("gender");
+    if(Number(localStorage.getItem("gender")) == 1){ gender = "Male"; }
+    document.getElementById("settings-gender").innerHTML = "Sex: " + gender;
 }
 
 function getHeight(){
