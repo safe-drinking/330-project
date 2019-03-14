@@ -29,7 +29,7 @@ function getHeight(){
 }
 
 function getWeight(){
-    document.getElementById("settings-weight").innerHTML = "Weight: " + localStorage.getItem("weight");
+    document.getElementById("settings-weight").innerHTML = "Weight: " + localStorage.getItem("weight") + " lb.";
 }
 
 
