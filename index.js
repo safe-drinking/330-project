@@ -89,6 +89,8 @@ function setUserInfo(userID) {
         storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 1);
         localStorage.setItem("weight", 150);
+        localStorage.setItem("height_foot", 5);
+        localStorage.setItem("height_inch", 5);
         localStorage.setItem("name", "Mr. Empty");
     }
     // john doe
@@ -105,6 +107,8 @@ function setUserInfo(userID) {
         storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 1);
         localStorage.setItem("weight", 175);
+        localStorage.setItem("height_foot", 6);
+        localStorage.setItem("height_inch", 1);
         localStorage.setItem("name", "John Doe");
         var i;
         for (i = 0; i < friends; i++) {
@@ -128,6 +132,8 @@ function setUserInfo(userID) {
         storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 0);
         localStorage.setItem("weight", 125);
+        localStorage.setItem("height_foot", 5);
+        localStorage.setItem("height_inch", 2);
         localStorage.setItem("name", "Jane Doe");
         var i;
         for (i = 0; i < friends; i++) {
