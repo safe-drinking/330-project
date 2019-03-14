@@ -35,7 +35,6 @@ function listEvents() {
             document.getElementById("events-list-content").innerHTML +=
                 "<button onclick='openEvent("+i+")' id='" + i + "'>" + eventName + "</button></br>";
         }
-
     }
 }
 
