@@ -4,10 +4,6 @@ function goTo(location) {
 
 // member
 var drinks = 0;
-// var stored_drinks = localStorage.getItem("drinks");
-// if (stored_drinks != null && stored_drinks != "NaN") {
-//     drinks = parseInt(localStorage.getItem("drinks"));
-// }
 var i;
 var eventName;
 for (i = 0; i < Number(localStorage.getItem("events")); i++){
@@ -18,9 +14,6 @@ for (i = 0; i < Number(localStorage.getItem("events")); i++){
 }
 
 // x values
-// var week = [1, 2, 3, 4, 5, 6, 7];
-// var month = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31];
-// var year = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 var week = [6, 5, 4, 3, 2, 1, 0];
 var month = [30, 27, 24, 21, 18, 15, 12, 9, 6, 3, 0];
 var year = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
@@ -34,7 +27,6 @@ var year_data = JSON.parse(localStorage.getItem("year_data"));
 var data_values = [year_data, month_data, week_data];
 var data_types = [year, month, week];
 var data_labels = ['year', 'month', 'week'];
-// var x_labels = ['month of the year', 'day of the month', 'day of the week'];
 var x_labels = ['Months Ago', 'Days Ago', 'Days Ago'];
 var titles = ['Past 12 Months', 'Past 30 Days', 'Past 7 Days'];
 
@@ -175,8 +167,6 @@ function getSum(total, num) {
 }
 
 function updateAvg() {
-    // var end = data_types[view_type].length - 1;
-    // avg = cum / (data_types[view_type][end]);
     avg = cum / (data_types[view_type][0]+1);
     avg = parseInt(avg * 100) / 100;
 }

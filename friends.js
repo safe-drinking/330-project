@@ -9,7 +9,6 @@ function init() {
     }
     window.listFriends();
     document.getElementById("incomplete-buddy-msg").style = 'display: none';
-
 }
 
 
@@ -19,7 +18,6 @@ function goTo(location) {
 
 function addBuddy() {
     document.getElementById("incomplete-buddy-msg").style = 'display: none';
-
     document.getElementById("addModal").style = 'display: inline';
 }
 
@@ -27,7 +25,6 @@ function addBuddyName() {
     if (document.getElementById("buddy-name").value == "" ||
         document.getElementById("buddy-email").value == "") {
         document.getElementById("incomplete-buddy-msg").style = 'display: inline';
-
     }
     
     else {
@@ -61,7 +58,6 @@ function listFriends() {
             document.getElementById("friends-list-content").innerHTML +=
                 "<button onclick=openFriendProfile(this.id) class='friend-btn' id= friend_" + i + ">" + String(friendsList[i]) + "</button></br>";
         }
-
     }
 }
 

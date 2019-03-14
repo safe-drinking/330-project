@@ -7,18 +7,10 @@ var friends;
 var week_data;
 var month_data;
 var year_data;
-// var friendsList1 = ["The Hound", "Meryn Trant", "Cersei Lannister", "Joffrey", "Walder Frey"];
 
 
 function init() {
     localStorage.clear();
-    // localStorage.setItem("events", events);
-    // localStorage.setItem("friends", friends);
-    // var i;
-    // for (i = 0; i < friends; i++) {
-    //     localStorage.setItem("friend_" + i, friendsList[i]);
-
-
     var j;
     // for (j = 0; j < friendEvents; j++) {
     //     localStorage.setItem("friendEvent_" + j, friendEventsList[j]);
@@ -75,14 +67,10 @@ function RegistrationStep1() {
 }
 
 function setUserInfo(userID) {
-    // Gender, weight, height, friends, events, drinking
-    // empty user profile
-
     // Mr. Empty
     if (userID == 0) {
         events = 0;
         friends = 0;
-
         week_data = [0, 0, 0, 0, 0, 0];
         month_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -147,7 +135,6 @@ function setUserInfo(userID) {
     else if (userID == -1) {
         events = 0;
         friends = 0;
-
         week_data = [0, 0, 0, 0, 0, 0];
         month_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
