@@ -1,22 +1,16 @@
 var events;
 var gender;
 var weight;
+var height_ft;
+var height_in;
 var friends;
 var week_data;
 var month_data;
 var year_data;
-// var friendsList1 = ["The Hound", "Meryn Trant", "Cersei Lannister", "Joffrey", "Walder Frey"];
 
 
 function init() {
     localStorage.clear();
-    // localStorage.setItem("events", events);
-    // localStorage.setItem("friends", friends);
-    // var i;
-    // for (i = 0; i < friends; i++) {
-    //     localStorage.setItem("friend_" + i, friendsList[i]);
-
-
     var j;
     // for (j = 0; j < friendEvents; j++) {
     //     localStorage.setItem("friendEvent_" + j, friendEventsList[j]);
@@ -73,22 +67,19 @@ function RegistrationStep1() {
 }
 
 function setUserInfo(userID) {
-    // Gender, weight, height, friends, events, drinking
-    // empty user profile
-
     // Mr. Empty
     if (userID == 0) {
         events = 0;
         friends = 0;
-
         week_data = [0, 0, 0, 0, 0, 0];
         month_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-        localStorage.clear();
         storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 1);
         localStorage.setItem("weight", 150);
+        localStorage.setItem("height_foot", 5);
+        localStorage.setItem("height_inch", 5);
         localStorage.setItem("name", "Mr. Empty");
     }
     // john doe
@@ -101,10 +92,11 @@ function setUserInfo(userID) {
         month_data = [7, 2, 2, 10, 0, 1, 2, 1, 0, 5, 7];
         year_data = [21, 36, 33, 19, 33, 33, 30, 40, 16, 36, 19, 40];
 
-        localStorage.clear();
         storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 1);
         localStorage.setItem("weight", 175);
+        localStorage.setItem("height_foot", 6);
+        localStorage.setItem("height_inch", 1);
         localStorage.setItem("name", "John Doe");
         var i;
         for (i = 0; i < friends; i++) {
@@ -124,10 +116,11 @@ function setUserInfo(userID) {
         month_data = [9, 1, 1, 8, 0, 1, 6, 2, 0, 1, 8];
         year_data = [34, 35, 23, 39, 21, 20, 22, 22, 18, 19, 25, 24];
 
-        localStorage.clear();
         storeData(week_data, month_data, year_data, friends, events);
         localStorage.setItem("gender", 0);
         localStorage.setItem("weight", 125);
+        localStorage.setItem("height_foot", 5);
+        localStorage.setItem("height_inch", 2);
         localStorage.setItem("name", "Jane Doe");
         var i;
         for (i = 0; i < friends; i++) {
@@ -142,12 +135,10 @@ function setUserInfo(userID) {
     else if (userID == -1) {
         events = 0;
         friends = 0;
-
         week_data = [0, 0, 0, 0, 0, 0];
         month_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-        localStorage.clear();
         storeData(week_data, month_data, year_data, friends, events);
     }
     else{
@@ -173,6 +164,13 @@ function setSex() {
 function setWeight() {
     weight = document.getElementsByClassName('height-input')[2].value;
     localStorage.setItem("weight", weight);
+}
+
+function setHeight() {
+    height_ft = document.getElementsByClassName('height-input')[0].value;
+    height_in = document.getElementsByClassName('height-input')[1].value;
+    localStorage.setItem("height_foot", height_ft);
+    localStorage.setItem("height_inch", height_in);
 }
 
 function setName() {
