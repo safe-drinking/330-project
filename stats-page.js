@@ -3,15 +3,16 @@ function goTo(location) {
 }
 
 // member
-var drinks = 0;
+var drinks = Number(localStorage.getItem("sumDrinks"));
 var i;
 var eventName;
 for (i = 0; i < Number(localStorage.getItem("events")); i++){
     var stored_drinks = localStorage.getItem("drinks_" + i);
-    if (stored_drinks != null && stored_drinks != "NaN") {
-        drinks += Number(localStorage.getItem("drinks_" + i));
+    if (stored_drinks != null && stored_drinks != "NaN" && stored_drinks != undefined) {
+        drinks += Number(stored_drinks);
     }
 }
+localStorage.setItem("sumDrinks", drinks);
 
 // x values
 var week = [6, 5, 4, 3, 2, 1, 0];
@@ -20,7 +21,7 @@ var year = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 
 // y values
 var week_data = JSON.parse(localStorage.getItem("week_data"));
-week_data.push(drinks);
+week_data.push(Number(drinks));
 var month_data = JSON.parse(localStorage.getItem("month_data"));
 var year_data = JSON.parse(localStorage.getItem("year_data"));
 

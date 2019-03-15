@@ -11,6 +11,7 @@ var year_data;
 
 function init() {
     localStorage.clear();
+    localStorage.setItem("sumDrinks", 0);
     var j;
     // for (j = 0; j < friendEvents; j++) {
     //     localStorage.setItem("friendEvent_" + j, friendEventsList[j]);
@@ -64,6 +65,7 @@ function RegistrationStep1() {
         $('#registerModal').modal('hide');
         $('#sexModal').modal('show');
     }
+    setName();
 }
 
 function setUserInfo(userID) {
@@ -175,7 +177,7 @@ function setHeight() {
 
 function setName() {
     name = document.getElementById('register-name').value;
-    localStorage.setItem("name", name)
+    localStorage.setItem("name", name);
 }
 
 function storeData(week_data, month_data, year_data, friends, events){
